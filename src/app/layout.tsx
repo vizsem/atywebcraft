@@ -58,7 +58,7 @@ export const metadata: Metadata = {
       "Solusi digital untuk bisnis Anda. Jasa pembuatan website perusahaan, toko online, dan aplikasi mobile Android & iOS di Kediri, Jawa Timur.",
     images: [
       { 
-        url: "/og-image.png", 
+        url: "/og-image.svg", 
         width: 1200, 
         height: 630,
         alt: "WebCraft - Jasa Pembuatan Website dan Aplikasi"
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "WebCraft — Jasa Pembuatan Website & Aplikasi Mobile",
     description: "Tingkatkan bisnis Anda dengan website & aplikasi mobile profesional. Hubungi WebCraft Kediri sekarang!",
-    images: ["/og-image.png"],
+    images: ["/og-image.svg"],
   },
   robots: {
     index: true,
