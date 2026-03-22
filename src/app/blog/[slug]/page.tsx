@@ -1,6 +1,38 @@
 import { getPostBySlug, blogPosts } from "@/lib/blog-data";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+// Generate dynamic metadata for SEO based on blog post
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const post = getPostBySlug(params.slug);
+  
+  if (!post) {
+    return {
+      title: "Artikel Tidak Ditemukan",
+    };
+  }
+
+  return {
+    title: post.title,
+    description: post.excerpt,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: "article",
+      publishedTime: post.date,
+      authors: [post.author],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+    },
+    alternates: {
+      canonical: `https://webcraft.aty0.com/blog/${post.slug}`,
+    }
+  };
+}
 
 // Generate static parameters for all known blog posts
 export function generateStaticParams() {

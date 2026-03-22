@@ -1,4 +1,13 @@
 import { PricingSection } from "@/components/sections/PricingSection";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Harga Jasa Pembuatan Website & Aplikasi",
+  description: "Daftar harga paket pembuatan website (Landing Page, Company Profile, Toko Online) dan aplikasi mobile Android & iOS di WebCraft Kediri.",
+  alternates: {
+    canonical: "https://webcraft.aty0.com/harga",
+  }
+};
 
 export default function HargaPage() {
   return (

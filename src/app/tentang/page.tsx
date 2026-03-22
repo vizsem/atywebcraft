@@ -1,3 +1,13 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Tentang WebCraft",
+  description: "WebCraft adalah software development studio di Kediri yang berdedikasi membantu UMKM dan perusahaan melakukan transformasi digital melalui website dan aplikasi.",
+  alternates: {
+    canonical: "https://webcraft.aty0.com/tentang",
+  }
+};
+
 export default function TentangPage() {
   return (
     <div className="container py-24 min-h-[70vh]">

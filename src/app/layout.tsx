@@ -21,45 +21,73 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://aty0.id"),
+  metadataBase: new URL("https://webcraft.aty0.com"),
   title: {
-    default: "aty0 | WebCraft — Jasa Pembuatan Website & Aplikasi Mobile",
-    template: "%s | aty0 WebCraft",
+    default: "WebCraft — Jasa Pembuatan Website & Aplikasi Mobile Kediri",
+    template: "%s | WebCraft Kediri",
   },
   description:
-    "Studio pembuatan website & aplikasi mobile profesional. Website, Android, iOS, Flutter — desain modern, performa tinggi, siap 7–21 hari.",
+    "Studio pembuatan website & aplikasi mobile profesional di Kediri. Melayani pembuatan landing page, e-commerce, aplikasi Android & iOS dengan desain modern dan performa tinggi.",
   keywords: [
-    "jasa pembuatan website",
-    "jasa aplikasi mobile",
+    "jasa pembuatan website kediri",
+    "jasa aplikasi mobile kediri",
     "jasa android ios",
-    "flutter developer indonesia",
-    "web developer madiun",
-    "next.js developer",
-    "toko online murah",
+    "bikin website murah",
+    "jasa landing page kediri",
+    "pembuatan toko online",
+    "software house kediri",
+    "web developer jawa timur",
+    "jasa seo website",
+    "buat aplikasi android"
   ],
-  authors: [{ name: "aty0 WebCraft", url: "https://aty0.id" }],
-  creator: "aty0 WebCraft",
+  authors: [{ name: "WebCraft", url: "https://webcraft.aty0.com" }],
+  creator: "WebCraft",
+  publisher: "WebCraft Studio",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://aty0.id",
-    siteName: "aty0 WebCraft",
-    title: "aty0 | WebCraft — Jasa Pembuatan Website & Aplikasi Mobile",
+    url: "https://webcraft.aty0.com",
+    siteName: "WebCraft Studio",
+    title: "WebCraft — Jasa Pembuatan Website & Aplikasi Mobile Kediri",
     description:
-      "Studio pembuatan website & aplikasi mobile profesional di Indonesia.",
-    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+      "Solusi digital untuk bisnis Anda. Jasa pembuatan website perusahaan, toko online, dan aplikasi mobile Android & iOS di Kediri, Jawa Timur.",
+    images: [
+      { 
+        url: "/og-image.png", 
+        width: 1200, 
+        height: 630,
+        alt: "WebCraft - Jasa Pembuatan Website dan Aplikasi"
+      }
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "aty0 | WebCraft",
-    description: "Jasa Pembuatan Website & Aplikasi Mobile Profesional",
+    title: "WebCraft — Jasa Pembuatan Website & Aplikasi Mobile",
+    description: "Tingkatkan bisnis Anda dengan website & aplikasi mobile profesional. Hubungi WebCraft Kediri sekarang!",
     images: ["/og-image.png"],
   },
   robots: {
     index: true,
     follow: true,
-    googleBot: { index: true, follow: true },
+    googleBot: { 
+      index: true, 
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
+  verification: {
+    google: "isi-dengan-kode-google-search-console-nanti", // TODO: Update when Google Search Console is set up
+  },
+  alternates: {
+    canonical: "https://webcraft.aty0.com",
+  }
 };
 
 export default function RootLayout({

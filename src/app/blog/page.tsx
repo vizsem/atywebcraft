@@ -1,5 +1,14 @@
 import Link from "next/link";
 import { blogPosts } from "@/lib/blog-data";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog & Wawasan Digital",
+  description: "Temukan artikel, tips SEO, strategi digital marketing, dan tren teknologi terbaru untuk membantu bisnis Anda berkembang.",
+  alternates: {
+    canonical: "https://webcraft.aty0.com/blog",
+  }
+};
 
 export default function BlogPage() {
   return (
