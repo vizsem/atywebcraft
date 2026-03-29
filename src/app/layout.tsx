@@ -83,7 +83,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "isi-dengan-kode-google-search-console-nanti", // TODO: Update when Google Search Console is set up
+    google: "AFrOaSILAsqxXwrBaPB1SpWXFNu1q_q_6kaEI3jliv8",
   },
   alternates: {
     canonical: "https://webcraft.aty0.com",
