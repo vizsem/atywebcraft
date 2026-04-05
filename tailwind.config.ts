@@ -20,7 +20,7 @@ const config: Config = {
         border: "var(--border)",
       },
       fontFamily: {
-        syne: ["var(--font-syne)"],
+        display: ["var(--font-space-grotesk)"],
         body: ["var(--font-dm-sans)"],
       },
     },

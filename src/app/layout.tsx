@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Syne, DM_Sans } from "next/font/google";
+import { Space_Grotesk, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWA } from "@/components/ui/FloatingWA";
 import { ScrollObserver } from "@/components/ui/ScrollObserver";
 
-const syne = Syne({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  weight: ["400", "600", "700", "800"],
-  variable: "--font-syne",
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-space-grotesk",
   display: "swap",
 });
 
@@ -107,7 +107,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="id" className={`${syne.variable} ${dmSans.variable}`}>
+    <html lang="id" className={`${spaceGrotesk.variable} ${dmSans.variable}`}>
       <body className="bg-bg text-text font-body antialiased overflow-x-hidden">
         <ScrollObserver />
         <Navbar />

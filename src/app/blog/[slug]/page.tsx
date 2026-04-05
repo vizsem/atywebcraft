@@ -61,7 +61,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           </span>
           <span className="text-sm text-muted">{post.readTime}</span>
         </div>
-        <h1 className="text-4xl md:text-5xl font-bold font-syne mb-6 leading-tight">
+        <h1 className="text-4xl md:text-5xl font-bold font-display mb-6 leading-tight">
           {post.title}
         </h1>
         <div className="flex items-center gap-4 py-6 border-y border-border">

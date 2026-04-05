@@ -18,7 +18,7 @@ export default function Error({
 
   return (
     <div className="container flex flex-col items-center justify-center min-h-[60vh] py-24 text-center">
-      <h2 className="text-3xl font-bold font-syne mb-4">Terjadi Kesalahan!</h2>
+      <h2 className="text-3xl font-bold font-display mb-4">Terjadi Kesalahan!</h2>
       <p className="text-muted mb-8 max-w-md">
         Maaf, terjadi kesalahan saat memuat halaman ini. Silakan coba lagi atau kembali ke beranda.
       </p>

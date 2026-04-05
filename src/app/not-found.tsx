@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function NotFoundPage() {
   return (
     <div className="container flex flex-col items-center justify-center min-h-[60vh] py-24 text-center">
-      <h1 className="text-6xl font-bold font-syne mb-4">404</h1>
+      <h1 className="text-6xl font-bold font-display mb-4">404</h1>
       <h2 className="text-2xl font-semibold mb-6">Halaman Tidak Ditemukan</h2>
       <p className="text-muted mb-8 max-w-md">
         Maaf, halaman yang Anda cari tidak ada atau telah dipindahkan.

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function TentangPage() {
   return (
     <div className="container py-24 min-h-[70vh]">
-      <h1 className="text-5xl font-bold font-syne mb-8 text-center"><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">Tentang</span> WebCraft</h1>
+      <h1 className="text-5xl font-bold font-display mb-8 text-center"><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">Tentang</span> WebCraft</h1>
       <div className="max-w-3xl mx-auto space-y-6 text-lg text-muted">
         <p>
           <strong>WebCraft</strong> adalah studio pengembangan perangkat lunak (software development studio) yang berdedikasi untuk membantu UMKM, perusahaan, dan startup di Indonesia dalam melakukan transformasi digital.
