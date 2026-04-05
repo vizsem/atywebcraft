@@ -6,7 +6,7 @@ export function Navbar() {
     <nav>
       <div className="logo">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/aty0-logo.png" alt="ATY0" width={42} height={42} priority />
+          <Image src="/aty0-logo.svg" alt="ATY0" width={42} height={42} priority />
           <span className="font-semibold">ATY0<span style={{ color: "var(--accent3)" }}>.</span></span>
         </Link>
       </div>

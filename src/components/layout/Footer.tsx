@@ -7,7 +7,7 @@ export function Footer() {
       <div className="footer-top">
         <div className="footer-brand">
           <div className="logo flex items-center gap-3">
-            <Image src="/aty0-logo.png" alt="ATY0" width={48} height={48} />
+            <Image src="/aty0-logo.svg" alt="ATY0" width={48} height={48} />
             <div>
               <div className="font-semibold">ATY0<span style={{ color: "var(--accent3)" }}>.</span></div>
               <p className="mt-2">Studio pembuatan website & aplikasi mobile profesional. Kami membantu bisnis hadir dan berkembang di dunia digital.</p>
