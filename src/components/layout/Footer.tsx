@@ -1,14 +1,18 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   return (
     <footer>
       <div className="footer-top">
         <div className="footer-brand">
-          <div className="logo">
-            WebCraft<span style={{ color: "var(--accent3)" }}>.</span>
+          <div className="logo flex items-center gap-3">
+            <Image src="/aty0-logo.png" alt="ATY0" width={48} height={48} />
+            <div>
+              <div className="font-semibold">ATY0<span style={{ color: "var(--accent3)" }}>.</span></div>
+              <p className="mt-2">Studio pembuatan website & aplikasi mobile profesional. Kami membantu bisnis hadir dan berkembang di dunia digital.</p>
+            </div>
           </div>
-          <p>Studio pembuatan website & aplikasi mobile profesional. Kami membantu bisnis Indonesia hadir dan berkembang di dunia digital.</p>
         </div>
         <div className="footer-links">
           <h4>Layanan</h4>

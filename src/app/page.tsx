@@ -10,9 +10,9 @@ import { TestimoniSection } from "@/components/sections/TestimoniSection";
 import { CtaSection } from "@/components/sections/CtaSection";
 
 export const metadata: Metadata = {
-  title: "Jasa Pembuatan Website & Aplikasi Mobile Kediri | WebCraft",
+  title: "ATY0 — Jasa Pembuatan Website & Aplikasi Mobile",
   description:
-    "WebCraft adalah software house di Kediri yang melayani jasa pembuatan website perusahaan, toko online, dan aplikasi mobile (Android & iOS). Konsultasi gratis sekarang!",
+    "ATY0 adalah studio teknologi yang melayani jasa pembuatan website perusahaan, toko online, dan aplikasi mobile (Android & iOS). Konsultasi gratis sekarang!",
   alternates: {
     canonical: "https://webcraft.aty0.com",
   }

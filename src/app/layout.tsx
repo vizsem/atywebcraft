@@ -52,8 +52,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "id_ID",
     url: "https://webcraft.aty0.com",
-    siteName: "WebCraft Studio",
-    title: "WebCraft — Jasa Pembuatan Website & Aplikasi Mobile Kediri",
+    siteName: "ATY0",
+    title: "ATY0 — Jasa Pembuatan Website & Aplikasi Mobile",
     description:
       "Solusi digital untuk bisnis Anda. Jasa pembuatan website perusahaan, toko online, dan aplikasi mobile Android & iOS di Kediri, Jawa Timur.",
     images: [
@@ -67,8 +67,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "WebCraft — Jasa Pembuatan Website & Aplikasi Mobile",
-    description: "Tingkatkan bisnis Anda dengan website & aplikasi mobile profesional. Hubungi WebCraft Kediri sekarang!",
+    title: "ATY0 — Jasa Pembuatan Website & Aplikasi Mobile",
+    description: "Tingkatkan bisnis Anda dengan website & aplikasi mobile profesional dari ATY0.",
     images: ["/og-image.svg"],
   },
   robots: {
@@ -84,6 +84,17 @@ export const metadata: Metadata = {
   },
   verification: {
     google: "AFrOaSILAsqxXwrBaPB1SpWXFNu1q_q_6kaEI3jliv8",
+  },
+  icons: {
+    icon: [
+      { url: "/aty0-favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico", sizes: "64x64 32x32 24x24 16x16", type: "image/x-icon" }
+    ],
+    shortcut: "/aty0-favicon-32.png",
+    apple: "/aty0-apple-touch-icon.png",
+    other: [
+      { rel: "manifest", url: "/manifest.json" }
+    ]
   },
   alternates: {
     canonical: "https://webcraft.aty0.com",

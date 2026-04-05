@@ -1,10 +1,14 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Navbar() {
   return (
     <nav>
       <div className="logo">
-        <Link href="/">WebCraft<span style={{ color: "var(--accent3)" }}>.</span></Link>
+        <Link href="/" className="flex items-center gap-2">
+          <Image src="/aty0-logo.png" alt="ATY0" width={42} height={42} priority />
+          <span className="font-semibold">ATY0<span style={{ color: "var(--accent3)" }}>.</span></span>
+        </Link>
       </div>
       <ul className="nav-links">
         <li><Link href="/#layanan">Layanan</Link></li>
