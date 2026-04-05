@@ -87,13 +87,13 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/aty0-favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
       { url: "/favicon.ico", sizes: "64x64 32x32 24x24 16x16", type: "image/x-icon" }
     ],
-    shortcut: "/aty0-favicon-32.png",
-    apple: "/aty0-apple-touch-icon.png",
+    shortcut: "/favicon-32x32.png",
+    apple: "/apple-touch-icon.png",
     other: [
-      { rel: "manifest", url: "/manifest.json" }
+      { rel: "manifest", url: "/site.webmanifest" }
     ]
   },
   alternates: {
