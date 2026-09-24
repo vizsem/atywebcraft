@@ -21,7 +21,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://webcraft.aty0.com"),
+  metadataBase: new URL("https://www.aty0.com"),
   title: {
     default: "WebCraft — Jasa Pembuatan Website & Aplikasi Mobile Kediri",
     template: "%s | WebCraft Kediri",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     "jasa seo website",
     "buat aplikasi android"
   ],
-  authors: [{ name: "WebCraft", url: "https://webcraft.aty0.com" }],
+  authors: [{ name: "WebCraft", url: "https://www.aty0.com" }],
   creator: "WebCraft",
   publisher: "WebCraft Studio",
   formatDetection: {
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://webcraft.aty0.com",
+    url: "https://www.aty0.com",
     siteName: "ATY0",
     title: "ATY0 — Jasa Pembuatan Website & Aplikasi Mobile",
     description:
@@ -97,7 +97,7 @@ export const metadata: Metadata = {
     ]
   },
   alternates: {
-    canonical: "https://webcraft.aty0.com",
+    canonical: "https://www.aty0.com",
   }
 };
 

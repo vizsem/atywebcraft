@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Blog & Wawasan Digital",
   description: "Temukan artikel, tips SEO, strategi digital marketing, dan tren teknologi terbaru untuk membantu bisnis Anda berkembang.",
   alternates: {
-    canonical: "https://webcraft.aty0.com/blog",
+    canonical: "https://www.aty0.com/blog",
   }
 };
 

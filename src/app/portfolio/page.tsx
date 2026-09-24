@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Portfolio Website & Aplikasi Mobile",
   description: "Lihat hasil karya terbaik dari WebCraft. Proyek pembuatan website perusahaan, e-commerce, portal berita, dan aplikasi mobile untuk klien kami.",
   alternates: {
-    canonical: "https://webcraft.aty0.com/portfolio",
+    canonical: "https://www.aty0.com/portfolio",
   }
 };
 

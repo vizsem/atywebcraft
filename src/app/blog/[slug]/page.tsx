@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: post.excerpt,
     },
     alternates: {
-      canonical: `https://webcraft.aty0.com/blog/${post.slug}`,
+      canonical: `https://www.aty0.com/blog/${post.slug}`,
     }
   };
 }

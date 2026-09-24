@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Tentang WebCraft",
   description: "WebCraft adalah software development studio di Kediri yang berdedikasi membantu UMKM dan perusahaan melakukan transformasi digital melalui website dan aplikasi.",
   alternates: {
-    canonical: "https://webcraft.aty0.com/tentang",
+    canonical: "https://www.aty0.com/tentang",
   }
 };
 

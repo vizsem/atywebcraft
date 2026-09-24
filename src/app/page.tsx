@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description:
     "ATY0 adalah studio teknologi yang melayani jasa pembuatan website perusahaan, toko online, dan aplikasi mobile (Android & iOS). Konsultasi gratis sekarang!",
   alternates: {
-    canonical: "https://webcraft.aty0.com",
+    canonical: "https://www.aty0.com",
   }
 };
 

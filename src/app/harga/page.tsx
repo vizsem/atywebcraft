@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Harga Jasa Pembuatan Website & Aplikasi",
   description: "Daftar harga paket pembuatan website (Landing Page, Company Profile, Toko Online) dan aplikasi mobile Android & iOS di WebCraft Kediri.",
   alternates: {
-    canonical: "https://webcraft.aty0.com/harga",
+    canonical: "https://www.aty0.com/harga",
   }
 };
 

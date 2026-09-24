@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { blogPosts } from '@/lib/blog-data'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://webcraft.aty0.com'
+  const baseUrl = 'https://www.aty0.com'
 
   // Static routes
   const routes = [
