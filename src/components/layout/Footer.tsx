@@ -44,6 +44,15 @@ export function Footer() {
             <li>🕐 Senin–Sabtu, 08–17 WIB</li>
           </ul>
         </div>
+        <div className="footer-links">
+          <h4>Informasi</h4>
+          <ul>
+            <li><Link href="/tentang">Tentang Kami</Link></li>
+            <li><Link href="/kontak">Kontak</Link></li>
+            <li><Link href="/privacy-policy">Privacy Policy</Link></li>
+            <li><Link href="/terms">Terms of Service</Link></li>
+          </ul>
+        </div>
       </div>
       <div className="footer-bottom">
         <p>© 2025 WebCraft Studio. All rights reserved.</p>
