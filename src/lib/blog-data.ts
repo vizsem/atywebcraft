@@ -18,6 +18,8 @@ export const blogPosts: BlogPost[] = [
     slug: "mengapa-bisnis-anda-butuh-website-di-tahun-2025",
     title: "Mengapa Bisnis Anda Membutuhkan Website di Tahun 2025?",
     excerpt: "Di era digital saat ini, mengandalkan media sosial saja tidak cukup. Pelajari alasan mengapa website profesional adalah aset krusial untuk pertumbuhan bisnis Anda.",
+    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Tim sedang berdiskusi tentang strategi bisnis digital",
     content: `
       <p>Banyak pemilik UMKM dan bisnis lokal beranggapan bahwa memiliki akun Instagram atau TikTok sudah cukup untuk berjualan online. Namun, algoritma media sosial selalu berubah, dan Anda tidak memiliki kontrol penuh atas platform tersebut.</p>
       
@@ -43,6 +45,8 @@ export const blogPosts: BlogPost[] = [
     slug: "tips-seo-dasar-untuk-toko-online-baru",
     title: "5 Tips SEO Dasar untuk Toko Online yang Baru Rilis",
     excerpt: "Baru saja meluncurkan toko online? Terapkan 5 langkah SEO sederhana ini agar produk Anda lebih mudah ditemukan oleh calon pembeli di halaman pencarian Google.",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Tampilan toko online pada laptop dan ponsel",
     content: `
       <p>Punya website toko online yang bagus tidak akan berguna jika tidak ada yang mengunjunginya. Di sinilah peran SEO (Search Engine Optimization) menjadi sangat penting.</p>
 
@@ -67,6 +71,8 @@ export const blogPosts: BlogPost[] = [
     slug: "pilih-website-atau-aplikasi-mobile",
     title: "Website vs Aplikasi Mobile: Mana yang Harus Diprioritaskan?",
     excerpt: "Banyak startup dan perusahaan bingung menentukan apakah harus membuat website terlebih dahulu atau langsung mengembangkan aplikasi mobile. Temukan jawabannya di sini.",
+    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Seseorang menggunakan aplikasi pada ponsel",
     content: `
       <p>Ini adalah pertanyaan klasik yang sering ditanyakan klien kepada kami: "Sebaiknya bikin web dulu atau aplikasi dulu?" Jawabannya sangat bergantung pada model bisnis dan target pasar Anda.</p>
 
@@ -99,6 +105,8 @@ export const blogPosts: BlogPost[] = [
     slug: "cara-meningkatkan-kecepatan-website",
     title: "Cara Meningkatkan Kecepatan Website untuk Pengalaman Pengguna yang Lebih Baik",
     excerpt: "Website yang cepat membantu pengunjung menemukan informasi dengan nyaman dan memberi sinyal positif bagi mesin pencari. Pelajari langkah praktis untuk mempercepat website bisnis Anda.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Dashboard analitik performa website",
     content: `
       <p>Kecepatan website memengaruhi kesan pertama pengunjung, tingkat konversi, dan peluang sebuah halaman ditemukan melalui Google. Pengunjung biasanya tidak ingin menunggu lama hanya untuk melihat informasi dasar tentang bisnis Anda.</p>
 

@@ -35,6 +35,14 @@ export function BlogRecommendationsSection() {
               key={post.id}
               className={`group flex h-full flex-col rounded-2xl border border-border bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 ${index === 0 ? "md:scale-[1.02]" : ""}`}
             >
+              {post.image && (
+                <img
+                  src={post.image}
+                  alt={post.imageAlt || post.title}
+                  className="-mx-6 -mt-6 mb-6 h-44 w-[calc(100%+3rem)] rounded-t-2xl object-cover"
+                  loading="lazy"
+                />
+              )}
               <div className="flex items-center justify-between gap-3 mb-6">
                 <span className="text-xs font-semibold uppercase tracking-wider text-primary">
                   {post.category}
