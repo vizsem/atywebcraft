@@ -51,7 +51,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   }
 
   return (
-    <article className="container max-w-3xl pt-32 pb-24 md:pt-40 min-h-[70vh]">
+    <article className="blog-article container max-w-3xl min-h-[70vh]">
       <Link href="/blog" className="inline-flex items-center text-sm text-muted hover:text-primary mb-8 transition-colors">
         ← Kembali ke Blog
       </Link>

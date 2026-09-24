@@ -97,6 +97,15 @@
     }
     .nav-cta:hover { opacity: 0.85; transform: translateY(-1px); }
 
+    .blog-article {
+      padding-top: 10rem;
+      padding-bottom: 6rem;
+    }
+    .blog-article h1 {
+      font-size: clamp(2rem, 4.5vw, 3.5rem);
+      line-height: 1.1;
+    }
+
     /* ─── HERO ─── */
     .hero {
       min-height: 100vh;
@@ -550,6 +559,7 @@
     /* ─── RESPONSIVE ─── */
     @media (max-width: 768px) {
       .nav-links { display: none; }
+      .blog-article { padding-top: 8.5rem; }
       .form-row { flex-direction: column; }
       .hero-stats { gap: 2rem; }
       .process-grid { grid-template-columns: 1fr 1fr; }
