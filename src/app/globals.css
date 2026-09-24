@@ -75,7 +75,7 @@
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
       padding: 1.2rem 5%;
-      background: rgba(10,10,15,0.85);
+      background: var(--nav-bg);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
@@ -96,6 +96,15 @@
       transition: opacity .2s, transform .2s;
     }
     .nav-cta:hover { opacity: 0.85; transform: translateY(-1px); }
+    .theme-toggle {
+      width: 2.4rem; height: 2.4rem;
+      display: inline-flex; align-items: center; justify-content: center;
+      flex: 0 0 auto;
+      border: 1px solid var(--border); border-radius: 50%;
+      background: var(--card); color: var(--text); cursor: pointer;
+      transition: color .2s, background .2s, border-color .2s, transform .2s;
+    }
+    .theme-toggle:hover { color: var(--accent3); border-color: var(--accent3); transform: rotate(12deg); }
 
     .blog-article {
       padding-top: 10rem;
@@ -559,6 +568,7 @@
     /* ─── RESPONSIVE ─── */
     @media (max-width: 768px) {
       .nav-links { display: none; }
+      nav { gap: 0.6rem; }
       .blog-article { padding-top: 8.5rem; }
       .form-row { flex-direction: column; }
       .hero-stats { gap: 2rem; }
@@ -568,5 +578,37 @@
     @media (max-width: 480px) {
       .process-grid { grid-template-columns: 1fr; }
       .cta-box { padding: 2.5rem 1.5rem; }
+    }
+
+    html:not(.dark) {
+      --bg: #f7f9fc;
+      --surface: #ffffff;
+      --card: #eef3f8;
+      --border: #d7e0ea;
+      --accent: #5b4ce5;
+      --accent2: #d94875;
+      --accent3: #087f9b;
+      --text: #162235;
+      --muted: #526173;
+      --nav-bg: rgba(247,249,252,0.9);
+    }
+
+    html.dark {
+      --bg: #0a0a0f;
+      --surface: #12121a;
+      --card: #1a1a26;
+      --border: rgba(255,255,255,0.07);
+      --accent: #7c5cfc;
+      --accent2: #fc5c7d;
+      --accent3: #5cf0fc;
+      --text: #f0f0f8;
+      --muted: #b2b4c7;
+      --nav-bg: rgba(10,10,15,0.85);
+    }
+
+    html:not(.dark) .hero-grid {
+      background-image:
+        linear-gradient(rgba(15,23,42,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15,23,42,0.08) 1px, transparent 1px);
     }
   
