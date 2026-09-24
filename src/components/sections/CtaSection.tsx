@@ -1,15 +1,26 @@
 "use client";
 
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 
 export function CtaSection() {
   const [btnText, setBtnText] = useState("Kirim & Konsultasi Gratis 🚀");
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setBtnText("✅ Pesan Terkirim! Kami akan hubungi segera.");
     setIsSubmitted(true);
+
+    const formData = new FormData(e.currentTarget);
+    const message = [
+      `Nama: ${formData.get("name")}`,
+      `WhatsApp: ${formData.get("phone")}`,
+      `Email: ${formData.get("email")}`,
+      `Layanan: ${formData.get("service")}`,
+      `Kebutuhan: ${formData.get("message")}`,
+    ].join("\n");
+
+    window.open(`https://wa.me/6285790565666?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -20,14 +31,14 @@ export function CtaSection() {
     <div className="section-tag centered">Mulai Sekarang</div>
     <h2>Siap Punya Website<br/>Impian Anda? 🚀</h2>
     <p>Konsultasi gratis, tidak ada kewajiban. Ceritakan kebutuhan Anda dan kami akan siapkan proposal terbaik dalam 24 jam.</p>
-    <div className="contact-form">
+    <form className="contact-form" onSubmit={handleSubmit}>
       <div className="form-row">
-        <input type="text" placeholder="Nama lengkap Anda" />
-        <input type="tel" placeholder="Nomor WhatsApp" />
+        <input name="name" type="text" placeholder="Nama lengkap Anda" required />
+        <input name="phone" type="tel" placeholder="Nomor WhatsApp" required />
       </div>
-      <input type="email" placeholder="Alamat email" />
-      <select>
-        <option value="" disabled selected>Jenis layanan yang dibutuhkan</option>
+      <input name="email" type="email" placeholder="Alamat email" required />
+      <select name="service" defaultValue="" required>
+        <option value="" disabled>Jenis layanan yang dibutuhkan</option>
         <optgroup label="🌐 Website">
           <option>Landing Page</option>
           <option>Website Perusahaan</option>
@@ -45,15 +56,15 @@ export function CtaSection() {
           <option>Konsultasi Digital</option>
         </optgroup>
       </select>
-      <textarea placeholder="Ceritakan bisnis dan kebutuhan website Anda..."></textarea>
+      <textarea name="message" placeholder="Ceritakan bisnis dan kebutuhan website Anda..." required></textarea>
       <button 
+        type="submit"
         className="btn-submit" 
-        onClick={handleSubmit}
         style={isSubmitted ? { background: "linear-gradient(135deg, #11998e, #38ef7d)", color: "#fff" } : {}}
       >
         {btnText}
       </button>
-    </div>
+    </form>
   </div>
 </section>
     </>

@@ -39,19 +39,17 @@ export function Footer() {
           <h4>Kontak</h4>
           <ul>
             <li><Link href="https://wa.me/6285790565666">📱 +62 857-9056-5666</Link></li>
-            <li><Link href="#">✉️ halo@webcraft.id</Link></li>
-            <li><Link href="#">📍 Kediri, Jawa Timur</Link></li>
-            <li><Link href="#">🕐 Senin–Sabtu, 08–17 WIB</Link></li>
+            <li><a href="mailto:halo@webcraft.id">✉️ halo@webcraft.id</a></li>
+            <li><a href="https://maps.google.com/?q=Kediri%2C%20Jawa%20Timur">📍 Kediri, Jawa Timur</a></li>
+            <li>🕐 Senin–Sabtu, 08–17 WIB</li>
           </ul>
         </div>
       </div>
       <div className="footer-bottom">
         <p>© 2025 WebCraft Studio. All rights reserved.</p>
         <div className="footer-socials">
-          <Link className="social-link" href="#" title="Instagram">IG</Link>
-          <Link className="social-link" href="#" title="WhatsApp">WA</Link>
-          <Link className="social-link" href="#" title="Facebook">FB</Link>
-          <Link className="social-link" href="#" title="LinkedIn">LI</Link>
+          <a className="social-link" href="https://wa.me/6285790565666" title="WhatsApp">WA</a>
+          <a className="social-link" href="mailto:halo@webcraft.id" title="Email">✉</a>
         </div>
       </div>
     </footer>

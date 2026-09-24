@@ -9,7 +9,7 @@ export function HeroSection() {
   <div className="hero-grid"></div>
   <div className="hero-content">
     <div className="hero-badge"><span></span> Inovasi Digital untuk Bisnis Anda</div>
-    <h1>Solusi Website & Aplikasi<br/><span className="grad">Berkualitas Tinggi</span></h1>
+    <h1>Solusi Website & Aplikasi<br />{" "}<span className="grad">Berkualitas Tinggi</span></h1>
     <p className="hero-sub">Kami membantu mewujudkan ide Anda menjadi produk digital yang menarik, responsif, dan siap bersaing di pasar modern. Dari web company profile hingga aplikasi mobile kompleks.</p>
     <div className="hero-actions">
       <Link href="/#kontak" className="btn-primary">🚀 Mulai Konsultasi</Link>
