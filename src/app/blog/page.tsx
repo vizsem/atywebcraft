@@ -23,6 +23,14 @@ export default function BlogPage() {
       <div className="container grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {blogPosts.map((post) => (
           <article key={post.id} className="group bg-surface border border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-300">
+            {post.image && (
+              <img
+                src={post.image}
+                alt={post.imageAlt || post.title}
+                className="w-full h-48 object-cover"
+                loading="lazy"
+              />
+            )}
             <div className="p-6">
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-xs font-semibold px-2 py-1 bg-primary/10 text-primary rounded-md uppercase tracking-wider">

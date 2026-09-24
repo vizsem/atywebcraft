@@ -4,6 +4,8 @@ export interface BlogPost {
   title: string;
   excerpt: string;
   content: string;
+  image?: string;
+  imageAlt?: string;
   date: string;
   author: string;
   category: string;
@@ -91,6 +93,34 @@ export const blogPosts: BlogPost[] = [
     author: "Tim WebCraft",
     category: "Teknologi",
     readTime: "6 min read"
+  },
+  {
+    id: "4",
+    slug: "cara-meningkatkan-kecepatan-website",
+    title: "Cara Meningkatkan Kecepatan Website untuk Pengalaman Pengguna yang Lebih Baik",
+    excerpt: "Website yang cepat membantu pengunjung menemukan informasi dengan nyaman dan memberi sinyal positif bagi mesin pencari. Pelajari langkah praktis untuk mempercepat website bisnis Anda.",
+    content: `
+      <p>Kecepatan website memengaruhi kesan pertama pengunjung, tingkat konversi, dan peluang sebuah halaman ditemukan melalui Google. Pengunjung biasanya tidak ingin menunggu lama hanya untuk melihat informasi dasar tentang bisnis Anda.</p>
+
+      <h2>1. Kompres dan Pilih Format Gambar yang Tepat</h2>
+      <p>Gambar berukuran besar sering menjadi penyebab utama halaman lambat. Kompres gambar sebelum diunggah dan gunakan format modern seperti WebP atau AVIF agar kualitas tetap baik dengan ukuran file yang lebih kecil.</p>
+
+      <h2>2. Kurangi Skrip yang Tidak Diperlukan</h2>
+      <p>Setiap widget, plugin, dan layanan pelacakan tambahan dapat menambah waktu pemuatan. Pertahankan hanya skrip yang benar-benar membantu tujuan bisnis, lalu muat skrip pihak ketiga setelah konten utama tampil.</p>
+
+      <h2>3. Gunakan Hosting dan Caching yang Baik</h2>
+      <p>Server yang stabil dan caching membantu mengirim halaman lebih cepat kepada pengunjung. Pastikan hosting memiliki lokasi server yang dekat dengan target audiens dan mendukung CDN jika trafik mulai meningkat.</p>
+
+      <h2>4. Uji dari Perangkat Mobile</h2>
+      <p>Sebagian besar pengunjung mengakses website melalui ponsel dan koneksi yang tidak selalu stabil. Uji halaman utama, navigasi, dan formulir dari perangkat mobile agar pengalaman pengguna tetap nyaman di kondisi nyata.</p>
+
+      <h2>Kesimpulan</h2>
+      <p>Website cepat tidak selalu membutuhkan perubahan besar. Mulailah dari gambar, skrip, hosting, dan pengujian mobile, lalu pantau hasilnya secara berkala menggunakan alat seperti PageSpeed Insights.</p>
+    `,
+    date: "18 Mar 2025",
+    author: "Tim WebCraft",
+    category: "Teknologi",
+    readTime: "5 min read"
   }
 ];
 

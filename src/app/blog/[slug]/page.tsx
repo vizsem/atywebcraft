@@ -75,6 +75,14 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         </div>
       </header>
 
+      {post.image && (
+        <img
+          src={post.image}
+          alt={post.imageAlt || post.title}
+          className="w-full aspect-video object-cover rounded-2xl mb-12"
+        />
+      )}
+
       {/* Prose class for rich text formatting (you can add @tailwindcss/typography later if needed) */}
       <div 
         className="prose prose-invert max-w-none text-lg leading-relaxed text-muted-foreground [&>h2]:text-2xl [&>h2]:font-bold [&>h2]:text-text [&>h2]:mt-10 [&>h2]:mb-4 [&>p]:mb-6 [&>ul]:list-disc [&>ul]:pl-6 [&>ul]:mb-6 [&>ul>li]:mb-2 [&>strong]:text-text"
