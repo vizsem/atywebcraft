@@ -47,6 +47,23 @@
 
     html { scroll-behavior: smooth; }
 
+    /* ─── CONTAINER — centered, responsive, consistent padding ─── */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .container { padding-left: 2.5rem; padding-right: 2.5rem; }
+    }
+    @media (min-width: 1280px) {
+      .container { padding-left: 3rem; padding-right: 3rem; }
+    }
+
     /* ─── NAV ─── */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;

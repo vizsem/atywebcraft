@@ -1,7 +1,8 @@
 import { getPostBySlug, blogPosts } from "@/lib/blog-data";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, Calendar, Clock, ListOrdered, Sparkles, User, ArrowRight, MessageCircle } from "lucide-react";
+import Image from "next/image";
+import { ArrowLeft, Calendar, Clock, ListOrdered, Sparkles, ArrowRight, MessageCircle } from "lucide-react";
 import { BlogArticleShare } from "@/components/blog/BlogArticleShare";
 import { ReadingProgress } from "@/components/blog/ReadingProgress";
 import type { Metadata } from "next";
@@ -64,6 +65,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     return `<h2 id="${id}" class="scroll-mt-28">${text}</h2>`;
   });
 
+  // Key Takeaways — daftar heading artikel sebagai poin utama (dinamis, bukan hardcoded)
+  const keyTakeaways = headings.slice(0, 5);
+
   // Related articles (matching category first)
   const relatedPosts = blogPosts
     .filter((p) => p.slug !== post.slug)
@@ -97,6 +101,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   return (
     <>
+      <ReadingProgress />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
@@ -172,11 +177,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         {/* Featured Image */}
         {post.image && (
           <div className="mb-10 overflow-hidden rounded-2xl border border-border shadow-2xl bg-surface">
-            <img
+            <Image
               src={post.image}
               alt={post.imageAlt || post.title}
+              width={896}
+              height={504}
               className="w-full aspect-[16/9] object-cover"
-              loading="eager"
+              priority
+              unoptimized={post.image.startsWith("http")}
             />
             {post.imageAlt && (
               <p className="px-4 py-2.5 text-xs text-center text-muted bg-card/60 border-t border-border/40">
@@ -188,12 +196,21 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
         {/* Key Takeaways Box */}
         <div className="mb-10 p-6 md:p-7 rounded-2xl bg-card border border-border/80 shadow-md">
-          <div className="flex items-center gap-2 mb-3 text-accent font-display font-semibold text-sm uppercase tracking-wider">
-            <Sparkles className="w-4 h-4" /> Poin Utama Artikel Ini
+          <div className="flex items-center gap-2 mb-4 text-accent font-display font-semibold text-sm uppercase tracking-wider">
+            <Sparkles className="w-4 h-4" /> Yang Akan Anda Pelajari
           </div>
-          <p className="text-sm md:text-base text-muted leading-relaxed">
-            Artikel ini membedah pendekatan sistematis untuk mengidentifikasi kebutuhan pengunjung, mengurangi hambatan, dan mengubah trafik menjadi konversi nyata bagi perkembangan bisnis Anda.
-          </p>
+          {keyTakeaways.length > 0 ? (
+            <ul className="space-y-2">
+              {keyTakeaways.map((h) => (
+                <li key={h.id} className="flex items-start gap-2.5 text-sm text-muted leading-relaxed">
+                  <span className="mt-0.5 w-4 h-4 rounded-full bg-accent/15 text-accent flex items-center justify-center flex-shrink-0 text-[10px] font-bold">✓</span>
+                  <a href={`#${h.id}`} className="hover:text-accent transition-colors">{h.text}</a>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="text-sm md:text-base text-muted leading-relaxed">{post.excerpt}</p>
+          )}
         </div>
 
         {/* Table of Contents (Daftar Isi) */}
@@ -304,11 +321,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   <div>
                     {related.image && (
                       <div className="w-full h-36 overflow-hidden bg-secondary">
-                        <img
+                        <Image
                           src={related.image}
                           alt={related.imageAlt || related.title}
+                          width={400}
+                          height={144}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                           loading="lazy"
+                          unoptimized={related.image.startsWith("http")}
                         />
                       </div>
                     )}
