@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Tentang WebCraft",
-  description: "WebCraft adalah software development studio di Kediri yang berdedikasi membantu UMKM dan perusahaan melakukan transformasi digital melalui website dan aplikasi.",
+  title: "Tentang ATY0 WebCraft",
+  description: "ATY0 WebCraft adalah software development studio di Kediri yang berdedikasi membantu UMKM dan perusahaan melakukan transformasi digital melalui website dan aplikasi.",
   alternates: {
     canonical: "https://www.aty0.com/tentang",
   }
@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 export default function TentangPage() {
   return (
     <div className="container py-24 min-h-[70vh]">
-      <h1 className="text-5xl font-bold font-display mb-8 text-center"><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">Tentang</span> WebCraft</h1>
+      <h1 className="text-5xl font-bold font-display mb-8 text-center"><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">Tentang</span> ATY0 WebCraft</h1>
       <div className="max-w-3xl mx-auto space-y-6 text-lg text-muted">
         <p>
-          <strong>WebCraft</strong> adalah studio pengembangan perangkat lunak (software development studio) yang berdedikasi untuk membantu UMKM, perusahaan, dan startup di Indonesia dalam melakukan transformasi digital.
+          <strong>ATY0 WebCraft</strong> adalah studio pengembangan perangkat lunak (software development studio) yang berdedikasi untuk membantu UMKM, perusahaan, dan startup di Indonesia dalam melakukan transformasi digital.
         </p>
         <p>
           Didirikan dengan semangat untuk memberikan solusi teknologi yang efektif dan efisien, kami percaya bahwa setiap bisnis berhak memiliki kehadiran digital yang profesional tanpa harus melalui proses yang rumit dan biaya yang tidak masuk akal.

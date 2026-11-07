@@ -11,9 +11,9 @@ import { BlogRecommendationsSection } from "@/components/sections/BlogRecommenda
 import { CtaSection } from "@/components/sections/CtaSection";
 
 export const metadata: Metadata = {
-  title: "ATY0 — Jasa Pembuatan Website & Aplikasi Mobile",
+  title: "ATY0 WebCraft — Jasa Pembuatan Website & Aplikasi Mobile Kediri",
   description:
-    "ATY0 adalah studio teknologi yang melayani jasa pembuatan website perusahaan, toko online, dan aplikasi mobile (Android & iOS). Konsultasi gratis sekarang!",
+    "ATY0 WebCraft adalah studio teknologi yang melayani jasa pembuatan website perusahaan, toko online, dan aplikasi mobile (Android & iOS). Konsultasi gratis sekarang!",
   alternates: {
     canonical: "https://www.aty0.com",
   }

@@ -2,8 +2,8 @@ import { PortfolioSection } from "@/components/sections/PortfolioSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Portfolio Website & Aplikasi Mobile",
-  description: "Lihat hasil karya terbaik dari WebCraft. Proyek pembuatan website perusahaan, e-commerce, portal berita, dan aplikasi mobile untuk klien kami.",
+  title: "Portfolio Website & Aplikasi Mobile — ATY0 WebCraft",
+  description: "Lihat hasil karya terbaik dari ATY0 WebCraft. Proyek pembuatan website perusahaan, e-commerce, portal berita, dan aplikasi mobile untuk klien kami.",
   alternates: {
     canonical: "https://www.aty0.com/portfolio",
   }

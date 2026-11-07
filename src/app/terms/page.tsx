@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service",
-  description: "Syarat dan ketentuan penggunaan website serta layanan ATY0.",
+  title: "Terms of Service — ATY0 WebCraft",
+  description: "Syarat dan ketentuan penggunaan website serta layanan ATY0 WebCraft.",
   alternates: {
     canonical: "https://www.aty0.com/terms",
   },
@@ -18,7 +18,7 @@ export default function TermsPage() {
       </header>
 
       <div className="space-y-8 text-lg leading-relaxed [&>h2]:text-2xl [&>h2]:font-bold [&>h2]:text-text [&>h2]:mt-10 [&>h2]:mb-3 [&>p]:mb-4 [&>ul]:list-disc [&>ul]:pl-6 [&>ul]:space-y-2">
-        <p>Selamat datang di ATY0. Dengan mengakses https://www.aty0.com, Anda menyetujui syarat dan ketentuan ini. Jika Anda tidak menyetujui bagian tertentu, mohon tidak menggunakan website atau layanan kami.</p>
+        <p>Selamat datang di ATY0 WebCraft. Dengan mengakses https://www.aty0.com, Anda menyetujui syarat dan ketentuan ini. Jika Anda tidak menyetujui bagian tertentu, mohon tidak menggunakan website atau layanan kami.</p>
 
         <h2>1. Penggunaan Website</h2>
         <p>Website ini menyediakan informasi tentang jasa pembuatan website, aplikasi mobile, konsultasi digital, dan konten edukasi. Anda setuju menggunakan website secara wajar, tidak mengganggu keamanan atau ketersediaannya, dan tidak menggunakan konten untuk tujuan yang melanggar hukum.</p>
@@ -30,13 +30,13 @@ export default function TermsPage() {
         <p>Pengiriman formulir atau pesan tidak otomatis membentuk kontrak kerja. Ruang lingkup, harga, jadwal, hak atas hasil kerja, dan kewajiban masing-masing pihak akan disepakati secara tertulis sebelum proyek dimulai. Penawaran dapat berubah berdasarkan kebutuhan dan kompleksitas pekerjaan.</p>
 
         <h2>4. Hak Kekayaan Intelektual</h2>
-        <p>Nama, logo, desain, tulisan, kode, dan materi website milik ATY0 atau pemberi lisensinya dilindungi oleh hukum yang berlaku, kecuali dinyatakan lain. Anda tidak boleh menyalin, menjual kembali, mengubah, atau mendistribusikan materi website tanpa izin tertulis.</p>
+        <p>Nama, logo, desain, tulisan, kode, dan materi website milik ATY0 WebCraft atau pemberi lisensinya dilindungi oleh hukum yang berlaku, kecuali dinyatakan lain. Anda tidak boleh menyalin, menjual kembali, mengubah, atau mendistribusikan materi website tanpa izin tertulis.</p>
 
         <h2>5. Tautan dan Layanan Eksternal</h2>
         <p>Website dapat memuat tautan menuju layanan pihak ketiga seperti WhatsApp, Google Maps, atau website portfolio. Kami tidak mengendalikan kebijakan, ketersediaan, atau isi layanan tersebut. Penggunaan layanan pihak ketiga tunduk pada ketentuan mereka masing-masing.</p>
 
         <h2>6. Batasan Tanggung Jawab</h2>
-        <p>Sejauh diizinkan hukum, ATY0 tidak bertanggung jawab atas kerugian yang timbul dari ketergantungan pada informasi umum di website, gangguan layanan pihak ketiga, atau akses yang tidak sah di luar kendali wajar kami. Kami tidak menjamin website akan selalu tersedia tanpa gangguan.</p>
+        <p>Sejauh diizinkan hukum, ATY0 WebCraft tidak bertanggung jawab atas kerugian yang timbul dari ketergantungan pada informasi umum di website, gangguan layanan pihak ketiga, atau akses yang tidak sah di luar kendali wajar kami. Kami tidak menjamin website akan selalu tersedia tanpa gangguan.</p>
 
         <h2>7. Perubahan Ketentuan</h2>
         <p>Kami dapat memperbarui syarat ini ketika layanan atau kebutuhan hukum berubah. Perubahan berlaku sejak dipublikasikan di halaman ini. Penggunaan website setelah perubahan berarti Anda menerima versi terbaru.</p>

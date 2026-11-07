@@ -23,26 +23,27 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.aty0.com"),
   title: {
-    default: "WebCraft — Jasa Pembuatan Website & Aplikasi Mobile Kediri",
-    template: "%s | WebCraft Kediri",
+    default: "ATY0 WebCraft — Jasa Pembuatan Website & Aplikasi Mobile Kediri",
+    template: "%s | ATY0 WebCraft Kediri",
   },
   description:
     "Studio pembuatan website & aplikasi mobile profesional di Kediri. Melayani pembuatan landing page, e-commerce, aplikasi Android & iOS dengan desain modern dan performa tinggi.",
   keywords: [
     "jasa pembuatan website kediri",
     "jasa aplikasi mobile kediri",
-    "jasa android ios",
-    "bikin website murah",
+    "jasa android ios kediri",
+    "bikin website kediri",
     "jasa landing page kediri",
     "pembuatan toko online",
     "software house kediri",
     "web developer jawa timur",
     "jasa seo website",
-    "buat aplikasi android"
+    "buat aplikasi android ios",
+    "aty0 webcraft"
   ],
-  authors: [{ name: "WebCraft", url: "https://www.aty0.com" }],
-  creator: "WebCraft",
-  publisher: "WebCraft Studio",
+  authors: [{ name: "ATY0 WebCraft", url: "https://www.aty0.com" }],
+  creator: "ATY0 WebCraft",
+  publisher: "ATY0 WebCraft Studio",
   formatDetection: {
     email: false,
     address: false,
@@ -52,8 +53,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "id_ID",
     url: "https://www.aty0.com",
-    siteName: "ATY0",
-    title: "ATY0 — Jasa Pembuatan Website & Aplikasi Mobile",
+    siteName: "ATY0 WebCraft",
+    title: "ATY0 WebCraft — Jasa Pembuatan Website & Aplikasi Mobile",
     description:
       "Solusi digital untuk bisnis Anda. Jasa pembuatan website perusahaan, toko online, dan aplikasi mobile Android & iOS di Kediri, Jawa Timur.",
     images: [
@@ -61,14 +62,14 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "ATY0 - Jasa Pembuatan Website dan Aplikasi"
+        alt: "ATY0 WebCraft - Jasa Pembuatan Website dan Aplikasi Mobile"
       }
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ATY0 — Jasa Pembuatan Website & Aplikasi Mobile",
-    description: "Tingkatkan bisnis Anda dengan website & aplikasi mobile profesional dari ATY0.",
+    title: "ATY0 WebCraft — Jasa Pembuatan Website & Aplikasi Mobile",
+    description: "Tingkatkan bisnis Anda dengan website & aplikasi mobile profesional dari ATY0 WebCraft.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -101,6 +102,36 @@ export const metadata: Metadata = {
   }
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "ATY0 WebCraft",
+  image: "https://www.aty0.com/logo.png",
+  url: "https://www.aty0.com",
+  telephone: "+6285790565666",
+  email: "halo@webcraft.id",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Kediri",
+    addressRegion: "Jawa Timur",
+    addressCountry: "ID"
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: -7.848,
+    longitude: 112.0178
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "08:00",
+      closes: "17:00"
+    }
+  ],
+  priceRange: "Rp 1.500.000 - Rp 15.000.000"
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -108,6 +139,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id" className={`${spaceGrotesk.variable} ${dmSans.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="bg-bg text-text font-body antialiased overflow-x-hidden">
         <ScrollObserver />
         <Navbar />

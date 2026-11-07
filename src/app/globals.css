@@ -2,28 +2,23 @@
 
 @layer base {
   :root {
-    --bg: #ffffff;
-    --text: #0f172a;
-    --primary: #3b82f6;
+    --bg: #0a0a0f;
+    --surface: #12121a;
+    --card: #1a1a26;
+    --border: rgba(255, 255, 255, 0.08);
+    --primary: #7c5cfc;
     --primary-foreground: #ffffff;
-    --secondary: #f1f5f9;
-    --secondary-foreground: #0f172a;
-    --accent: #f59e0b;
-    --muted: #64748b;
-    --border: #e2e8f0;
+    --secondary: #1a1a26;
+    --secondary-foreground: #f0f0f8;
+    --accent: #7c5cfc;
+    --accent2: #fc5c7d;
+    --accent3: #5cf0fc;
+    --text: #f0f0f8;
+    --muted: #b2b4c7;
+    --nav-bg: rgba(10, 10, 15, 0.85);
     --radius: 0.5rem;
-  }
-
-  .dark {
-    --bg: #0f172a;
-    --text: #f8fafc;
-    --primary: #3b82f6;
-    --primary-foreground: #ffffff;
-    --secondary: #1e293b;
-    --secondary-foreground: #f8fafc;
-    --accent: #f59e0b;
-    --muted: #94a3b8;
-    --border: #334155;
+    --font-display: var(--font-space-grotesk), sans-serif;
+    --font-body: var(--font-dm-sans), sans-serif;
   }
 
   * {
@@ -31,7 +26,12 @@
   }
 
   body {
-    @apply bg-[var(--bg)] text-[var(--text)];
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
   }
 }
 
@@ -45,30 +45,7 @@
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    :root {
-      --bg: #0a0a0f;
-      --surface: #12121a;
-      --card: #1a1a26;
-      --border: rgba(255,255,255,0.07);
-      --accent: #7c5cfc;
-      --accent2: #fc5c7d;
-      --accent3: #5cf0fc;
-      --text: #f0f0f8;
-      --muted: #7a7a9a;
-      --font-display: var(--font-space-grotesk), sans-serif;
-      --font-body: 'DM Sans', sans-serif;
-    }
-
     html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--font-body);
-      font-size: 16px;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
 
     /* ─── NAV ─── */
     nav {

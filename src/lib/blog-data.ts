@@ -530,7 +530,434 @@ const additionalBlogPosts: BlogPost[] = [
   },
 ].map((article) => ({
   ...article,
-  author: "Tim WebCraft",
+  author: "Tim ATY0 WebCraft",
+  content: createLongFormContent(article)
+}));
+
+const moreBlogPosts: BlogPost[] = [
+  {
+    id: "35", slug: "riset-keyword-untuk-pemula", title: "Riset Keyword untuk Pemula: Menemukan Topik yang Dicari Pelanggan",
+    excerpt: "Panduan praktis memilih keyword yang relevan, realistis, dan dekat dengan kebutuhan calon pelanggan.", image: "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?auto=format&fit=crop&w=1200&q=80", imageAlt: "Laptop dan catatan untuk riset keyword", date: "22 Agu 2025", category: "SEO", readTime: "8 min read",
+    introduction: "Riset keyword membantu bisnis memahami bahasa yang dipakai calon pelanggan ketika mencari solusi. Proses ini bukan sekadar mencari kata dengan volume tinggi, melainkan menemukan topik yang memiliki hubungan jelas dengan layanan dan keputusan pembelian.",
+    context: "Pemula sering langsung memilih keyword paling populer sehingga bersaing dengan website besar. Pendekatan yang lebih sehat dimulai dari masalah pelanggan, lokasi, tahap keputusan, dan kemampuan bisnis untuk membuat konten yang benar-benar membantu.",
+    sections: [
+      { heading: "Mulai dari Bahasa Pelanggan", body: "Kumpulkan pertanyaan dari chat, sales, komentar, dan forum. Frasa tersebut biasanya lebih dekat dengan kebutuhan nyata daripada istilah internal perusahaan." },
+      { heading: "Bedakan Maksud Pencarian", body: "Keyword informasional, komersial, dan transaksional membutuhkan halaman berbeda. Pahami maksudnya sebelum menentukan format konten." },
+      { heading: "Pilih Long-Tail Keyword", body: "Frasa yang lebih spesifik sering memiliki persaingan lebih rendah dan pengunjung dengan kebutuhan lebih jelas." },
+      { heading: "Kelompokkan Topik", body: "Satukan keyword yang menjawab pertanyaan sama agar website tidak memiliki banyak halaman yang saling bersaing." },
+      { heading: "Hubungkan dengan Penawaran", body: "Prioritaskan topik yang dapat mengantar pembaca menuju layanan, konsultasi, atau produk yang memang tersedia." }
+    ],
+    checklist: ["Catat dua puluh pertanyaan pelanggan.", "Kelompokkan keyword berdasarkan maksud pencarian.", "Pilih topik dengan hubungan bisnis yang jelas.", "Tentukan halaman utama dan pendukung.", "Ukur trafik serta tindakan setelah membaca."], conclusion: "Riset keyword yang baik mengubah bahasa pelanggan menjadi peta konten yang berguna."
+  },
+  {
+    id: "36", slug: "internal-linking-untuk-blog", title: "Internal Linking untuk Blog agar Pembaca Menemukan Konten Relevan",
+    excerpt: "Gunakan internal link untuk memperjelas struktur website, membantu pembaca, dan mendistribusikan nilai antarhalaman.", image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=1200&q=80", imageAlt: "Catatan artikel yang saling terhubung", date: "27 Agu 2025", category: "SEO", readTime: "8 min read",
+    introduction: "Blog yang memiliki banyak artikel membutuhkan jalur navigasi yang membantu pembaca melanjutkan riset. Internal linking menghubungkan halaman yang relevan sehingga informasi tidak berhenti pada satu artikel saja.",
+    context: "Link internal juga membantu mesin pencari memahami hubungan topik dan prioritas halaman. Namun link harus dibuat untuk konteks pembaca, bukan ditempel sebanyak mungkin pada setiap paragraf.",
+    sections: [
+      { heading: "Petakan Topik Utama", body: "Tentukan halaman pilar dan artikel pendukung. Struktur ini membuat konten lebih mudah dipahami dan dikembangkan." },
+      { heading: "Gunakan Anchor yang Deskriptif", body: "Teks link sebaiknya menjelaskan tujuan halaman berikutnya. Hindari anchor generik seperti klik di sini." },
+      { heading: "Letakkan pada Konteks Tepat", body: "Link paling berguna muncul ketika pembaca membutuhkan penjelasan lanjutan, bukan hanya di daftar link acak." },
+      { heading: "Periksa Link Rusak", body: "Halaman yang dihapus atau slug yang berubah dapat menciptakan pengalaman buruk. Audit link secara berkala." },
+      { heading: "Perbarui Artikel Lama", body: "Artikel lama sering menjadi pintu masuk baru. Tambahkan link menuju panduan atau layanan yang lebih terbaru." }
+    ],
+    checklist: ["Buat daftar halaman pilar.", "Kelompokkan artikel berdasarkan topik.", "Tulis anchor text yang jelas.", "Periksa link pada artikel lama.", "Ukur halaman lanjutan yang paling sering dibuka."], conclusion: "Internal linking yang rapi membuat blog terasa seperti perpustakaan yang mudah dijelajahi."
+  },
+  {
+    id: "37", slug: "meta-title-description-seo", title: "Cara Menulis Meta Title dan Description yang Menarik Klik",
+    excerpt: "Optimalkan judul dan deskripsi hasil pencarian agar halaman lebih jelas dan menarik bagi calon pengunjung.", image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1200&q=80", imageAlt: "Laptop dan catatan untuk menulis konten SEO", date: "01 Sep 2025", category: "SEO", readTime: "8 min read",
+    introduction: "Meta title dan description menjadi ringkasan pertama yang dilihat orang ketika menemukan website di hasil pencarian. Keduanya harus menjelaskan isi halaman dengan jujur sekaligus memberi alasan yang kuat untuk berkunjung.",
+    context: "Optimasi metadata tidak menjamin posisi pertama, tetapi dapat membantu mesin pencari dan pengguna memahami relevansi halaman. Kualitasnya perlu mengikuti intent dan isi konten, bukan sekadar memasukkan keyword.",
+    sections: [
+      { heading: "Utamakan Kejelasan", body: "Tulis manfaat dan konteks halaman sebelum memikirkan variasi kata. Pengguna harus memahami tujuan halaman dengan cepat." },
+      { heading: "Letakkan Keyword Secara Natural", body: "Gunakan keyword utama ketika relevan, tetapi hindari pengulangan yang membuat judul terasa dibuat untuk mesin." },
+      { heading: "Buat Setiap Halaman Unik", body: "Judul yang sama pada banyak URL menyulitkan pengguna membedakan hasil. Sesuaikan metadata dengan isi masing-masing halaman." },
+      { heading: "Tulis Ajakan yang Wajar", body: "Description dapat menyebut manfaat atau langkah berikutnya tanpa janji berlebihan yang tidak ditemukan pada halaman." },
+      { heading: "Pantau Perubahan", body: "Periksa CTR dan query yang memunculkan halaman. Data ini membantu Anda memperbaiki metadata dengan lebih terarah." }
+    ],
+    checklist: ["Tulis tujuan setiap halaman.", "Buat title unik dan deskriptif.", "Jelaskan manfaat dalam description.", "Cocokkan metadata dengan konten.", "Bandingkan CTR sebelum dan sesudah."], conclusion: "Metadata yang baik mengawali hubungan yang jujur antara hasil pencarian dan isi website."
+  },
+  {
+    id: "38", slug: "google-business-profile-untuk-umkm", title: "Panduan Google Business Profile untuk UMKM",
+    excerpt: "Bantu bisnis lokal tampil lebih meyakinkan dengan profil bisnis yang lengkap, konsisten, dan aktif.", image: "https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?auto=format&fit=crop&w=1200&q=80", imageAlt: "Pemilik usaha mengelola bisnis dari laptop", date: "06 Sep 2025", category: "SEO", readTime: "8 min read",
+    introduction: "Google Business Profile membantu calon pelanggan menemukan lokasi, jam buka, nomor telepon, foto, dan ulasan bisnis. Profil yang lengkap dapat menjadi jembatan penting antara pencarian lokal dan kunjungan nyata.",
+    context: "Profil bisnis bukan sesuatu yang diisi sekali lalu dilupakan. Informasi perlu dijaga akurat, foto perlu diperbarui, dan ulasan perlu dijawab dengan sikap profesional.",
+    sections: [
+      { heading: "Pilih Kategori yang Tepat", body: "Kategori membantu Google memahami layanan utama. Pilih yang paling menggambarkan bisnis, lalu jelaskan layanan tambahan di deskripsi." },
+      { heading: "Lengkapi Informasi Kontak", body: "Nama, alamat, telepon, jam, dan website harus konsisten dengan kanal lain agar pelanggan tidak menerima informasi berbeda." },
+      { heading: "Gunakan Foto Nyata", body: "Foto tempat, tim, produk, dan hasil kerja memberi gambaran yang lebih dapat dipercaya daripada gambar stok." },
+      { heading: "Tanggapi Ulasan", body: "Jawaban yang personal dan sopan menunjukkan bahwa bisnis memperhatikan pengalaman pelanggan, termasuk ketika menerima kritik." },
+      { heading: "Publikasikan Pembaruan", body: "Gunakan fitur posting untuk mengumumkan layanan, jadwal, atau informasi penting tanpa membanjiri pengunjung." }
+    ],
+    checklist: ["Verifikasi profil bisnis.", "Samakan semua data kontak.", "Unggah foto terbaru secara berkala.", "Balas ulasan dengan konteks.", "Pantau panggilan dan permintaan arah."], conclusion: "Profil bisnis yang terawat membuat kehadiran lokal terlihat aktif dan dapat dipercaya."
+  },
+  {
+    id: "39", slug: "blog-berbasis-pengalaman-pribadi", title: "Membangun Blog yang Berbasis Pengalaman dan Keahlian Nyata",
+    excerpt: "Buat artikel yang lebih dipercaya dengan pengalaman, contoh, dan sudut pandang yang tidak mudah ditemukan di tempat lain.", image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80", imageAlt: "Penulis menyusun artikel di meja kerja", date: "11 Sep 2025", category: "Content", readTime: "8 min read",
+    introduction: "Pembaca memiliki banyak pilihan artikel untuk topik yang sama. Blog yang berbasis pengalaman nyata dapat menonjol karena menyajikan keputusan, kesalahan, dan pembelajaran yang tidak tersedia dalam ringkasan umum.",
+    context: "Keahlian tidak harus selalu ditunjukkan melalui istilah rumit. Contoh sederhana yang jujur dan memiliki konteks sering lebih berguna bagi pembaca yang sedang mengambil keputusan.",
+    sections: [
+      { heading: "Catat Proses dan Keputusan", body: "Tuliskan mengapa sebuah pilihan dibuat, bukan hanya hasil akhirnya. Pembaca dapat belajar dari pertimbangan yang Anda gunakan." },
+      { heading: "Gunakan Contoh Konkret", body: "Contoh sebelum dan sesudah membantu pembaca memahami dampak. Hapus informasi sensitif tetapi pertahankan konteks yang berguna." },
+      { heading: "Akui Batasan", body: "Artikel terasa lebih terpercaya ketika menjelaskan kondisi di mana saran mungkin tidak berlaku." },
+      { heading: "Bedakan Opini dan Fakta", body: "Tandai pendapat, pengalaman, dan data secara jelas. Rujuk sumber ketika membuat klaim yang dapat diverifikasi." },
+      { heading: "Perbarui Pembelajaran", body: "Pengalaman baru dapat mengubah pandangan. Tambahkan catatan pembaruan ketika strategi atau alat mengalami perubahan." }
+    ],
+    checklist: ["Pilih pengalaman yang relevan.", "Tulis masalah sebelum solusi.", "Tambahkan contoh nyata.", "Jelaskan batasan rekomendasi.", "Perbarui artikel ketika ada pembelajaran baru."], conclusion: "Blog yang berangkat dari pengalaman membuat keahlian terasa lebih dekat dan dapat dipraktikkan."
+  },
+  {
+    id: "40", slug: "strategi-distribusi-konten-blog", title: "Strategi Distribusi Konten Blog setelah Artikel Terbit",
+    excerpt: "Artikel bagus membutuhkan distribusi yang tepat agar dapat ditemukan, dibaca, dan menghasilkan hubungan baru dengan audiens.", image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=80", imageAlt: "Tim merencanakan distribusi konten", date: "16 Sep 2025", category: "Content", readTime: "8 min read",
+    introduction: "Menerbitkan artikel hanyalah satu tahap dalam pemasaran konten. Distribusi membantu artikel mencapai orang yang memiliki pertanyaan sesuai dengan topik yang dibahas.",
+    context: "Distribusi tidak berarti membagikan link secara berulang. Setiap kanal membutuhkan format, konteks, dan waktu yang sesuai dengan kebiasaan audiensnya.",
+    sections: [
+      { heading: "Mulai dari Kanal Milik Sendiri", body: "Bagikan artikel melalui newsletter, website, atau komunitas pelanggan yang sudah memiliki hubungan dengan bisnis." },
+      { heading: "Ubah Format Konten", body: "Ringkas artikel menjadi carousel, video pendek, checklist, atau jawaban forum tanpa kehilangan konteks penting." },
+      { heading: "Gunakan Promosi Berbayar Secara Selektif", body: "Promosikan konten yang sudah terbukti relevan, bukan setiap artikel. Targetkan audiens berdasarkan masalah yang dibahas." },
+      { heading: "Bangun Relasi dengan Komunitas", body: "Berikan jawaban yang berguna sebelum membagikan tautan. Komunitas menghargai kontribusi, bukan promosi berulang." },
+      { heading: "Ukur Dampak Distribusi", body: "Bandingkan sumber kunjungan, waktu membaca, dan tindakan lanjutan. Saluran terbaik bukan selalu yang menghasilkan klik terbanyak." }
+    ],
+    checklist: ["Pilih kanal sesuai kebiasaan audiens.", "Buat tiga format turunan.", "Kirim ke daftar yang relevan.", "Berikan konteks saat membagikan link.", "Catat kanal yang menghasilkan interaksi berkualitas."], conclusion: "Distribusi membuat investasi menulis bekerja lebih lama dan menjangkau pembaca yang tepat."
+  },
+  {
+    id: "41", slug: "newsletter-bisnis-yang-bernilai", title: "Cara Membuat Newsletter Bisnis yang Ingin Dibaca",
+    excerpt: "Bangun newsletter yang konsisten, relevan, dan bermanfaat tanpa memenuhi inbox pelanggan dengan promosi terus-menerus.", image: "https://images.unsplash.com/photo-1557200134-90327ee9fafa?auto=format&fit=crop&w=1200&q=80", imageAlt: "Email newsletter pada perangkat digital", date: "21 Sep 2025", category: "Content", readTime: "8 min read",
+    introduction: "Newsletter yang baik terasa seperti bantuan yang datang tepat waktu, bukan gangguan. Pembaca perlu mengetahui nilai yang akan diterima sebelum mereka memutuskan untuk tetap berlangganan.",
+    context: "Konsistensi, relevansi, dan rasa hormat terhadap waktu pembaca lebih penting daripada desain yang penuh dekorasi. Newsletter dapat menjadi kanal hubungan yang kuat ketika isinya memiliki tujuan jelas.",
+    sections: [
+      { heading: "Tentukan Janji Newsletter", body: "Jelaskan apakah pembaca akan menerima tips, rangkuman, penawaran, atau wawasan industri. Janji yang spesifik membantu menarik audiens yang sesuai." },
+      { heading: "Gunakan Format yang Konsisten", body: "Struktur yang familiar membuat pembaca mudah menemukan bagian penting dan mengurangi beban membaca." },
+      { heading: "Berikan Nilai sebelum Promosi", body: "Informasi yang berguna membangun kepercayaan. Penawaran akan lebih diterima ketika tidak menjadi satu-satunya isi email." },
+      { heading: "Segmentasikan Daftar", body: "Pembaca dengan minat berbeda membutuhkan pesan berbeda. Segmentasi sederhana dapat meningkatkan relevansi tanpa proses rumit." },
+      { heading: "Hormati Preferensi", body: "Sediakan unsubscribe, frekuensi yang jelas, dan cara memperbarui preferensi. Daftar yang sehat membantu reputasi pengirim." }
+    ],
+    checklist: ["Tulis janji newsletter.", "Tentukan jadwal realistis.", "Buat format yang mudah dipindai.", "Pisahkan audiens berdasarkan minat.", "Pantau unsubscribe dan balasan."], conclusion: "Newsletter yang bernilai memperlakukan inbox sebagai ruang kepercayaan, bukan papan iklan."
+  },
+  {
+    id: "42", slug: "proses-discovery-proyek-website", title: "Mengapa Discovery Penting sebelum Membangun Website",
+    excerpt: "Pahami bagaimana fase discovery mengurangi miskomunikasi, memperjelas ruang lingkup, dan membuat proyek website lebih terarah.", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80", imageAlt: "Tim melakukan workshop perencanaan proyek", date: "26 Sep 2025", category: "Proses", readTime: "8 min read",
+    introduction: "Proyek website sering bermasalah bukan karena kemampuan teknis, tetapi karena tujuan dan ruang lingkup tidak pernah disepakati dengan jelas. Discovery menyediakan waktu untuk memahami kebutuhan sebelum produksi dimulai.",
+    context: "Fase ini dapat berisi wawancara, audit website lama, pemetaan pengguna, prioritas fitur, dan pembahasan batasan. Hasilnya menjadi dasar keputusan desain dan teknis.",
+    sections: [
+      { heading: "Pahami Tujuan Bisnis", body: "Website perlu terhubung dengan hasil yang ingin dicapai seperti lead, penjualan, edukasi, atau efisiensi layanan." },
+      { heading: "Kenali Pengguna", body: "Pahami pertanyaan, keberatan, perangkat, dan konteks pengguna agar solusi tidak hanya mewakili sudut pandang internal." },
+      { heading: "Tentukan Ruang Lingkup", body: "Pisahkan fitur wajib, fitur berikutnya, dan ide eksperimen agar jadwal serta anggaran tetap realistis." },
+      { heading: "Petakan Risiko", body: "Identifikasi integrasi, data, konten, approval, dan ketergantungan yang dapat menghambat pekerjaan." },
+      { heading: "Dokumentasikan Keputusan", body: "Dokumen discovery membantu semua pihak mengingat alasan prioritas dan mengurangi diskusi berulang." }
+    ],
+    checklist: ["Jadwalkan wawancara stakeholder.", "Tuliskan tujuan utama proyek.", "Buat daftar pengguna dan kebutuhannya.", "Prioritaskan fitur berdasarkan dampak.", "Simpan keputusan dalam dokumen bersama."], conclusion: "Discovery membuat proyek website dimulai dari pemahaman, bukan asumsi."
+  },
+  {
+    id: "43", slug: "menghitung-roi-website-bisnis", title: "Cara Menghitung ROI Website untuk Bisnis",
+    excerpt: "Gunakan kerangka sederhana untuk menilai apakah investasi website membantu pertumbuhan, efisiensi, atau kepercayaan bisnis.", image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80", imageAlt: "Kalkulator dan laporan keuangan bisnis", date: "01 Okt 2025", category: "Bisnis Digital", readTime: "8 min read",
+    introduction: "Website dapat memberi nilai melalui penjualan langsung, lead, penghematan waktu, dan peningkatan kepercayaan. ROI perlu menghitung manfaat yang relevan dengan model bisnis, bukan hanya jumlah kunjungan.",
+    context: "Perhitungan sederhana membantu pemilik bisnis menetapkan tujuan dan mengevaluasi hasil. Angka tidak harus sempurna, tetapi asumsi dan periode pengukuran harus dijelaskan.",
+    sections: [
+      { heading: "Tentukan Investasi", body: "Hitung biaya desain, pengembangan, konten, hosting, maintenance, dan promosi yang berhubungan dengan website." },
+      { heading: "Pilih Manfaat yang Diukur", body: "Manfaat dapat berupa penjualan, margin, nilai lead, penghematan pekerjaan, atau penurunan pertanyaan berulang." },
+      { heading: "Gunakan Nilai Lead", body: "Jika penjualan terjadi setelah proses panjang, gunakan rata-rata nilai dan tingkat keberhasilan lead untuk membuat estimasi wajar." },
+      { heading: "Bandingkan sebelum dan sesudah", body: "Catat kondisi awal agar perubahan dapat terlihat. Perhatikan faktor lain yang juga memengaruhi hasil." },
+      { heading: "Review Asumsi", body: "ROI bukan angka tetap. Perbarui asumsi ketika harga, trafik, proses sales, atau kapasitas tim berubah." }
+    ],
+    checklist: ["Catat seluruh biaya website.", "Tentukan konversi dan nilai lead.", "Ambil baseline sebelum perubahan.", "Pisahkan manfaat langsung dan tidak langsung.", "Review hasil berdasarkan periode yang konsisten."], conclusion: "ROI website menjadi bermakna ketika terhubung dengan keputusan bisnis yang nyata."
+  },
+  {
+    id: "44", slug: "audit-konten-website", title: "Cara Melakukan Audit Konten Website secara Berkala",
+    excerpt: "Temukan halaman yang perlu dipertahankan, diperbarui, digabung, atau dihapus agar website tetap relevan.", image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=1200&q=80", imageAlt: "Dokumen dan catatan untuk audit konten", date: "06 Okt 2025", category: "Content", readTime: "8 min read",
+    introduction: "Konten website dapat menjadi usang ketika layanan, harga, kebutuhan pelanggan, atau mesin pencari berubah. Audit konten membantu bisnis menjaga kualitas tanpa membuat halaman baru secara membabi buta.",
+    context: "Audit yang baik menggabungkan data performa, akurasi informasi, kualitas tulisan, dan tujuan bisnis. Hasilnya bukan hanya daftar masalah, tetapi prioritas tindakan yang jelas.",
+    sections: [
+      { heading: "Kumpulkan Daftar Halaman", body: "Mulai dari sitemap, analytics, dan link internal. Pastikan setiap halaman memiliki pemilik dan tujuan." },
+      { heading: "Periksa Akurasi", body: "Tinjau harga, kontak, layanan, screenshot, statistik, dan referensi yang dapat berubah dari waktu ke waktu." },
+      { heading: "Nilai Performa", body: "Bandingkan trafik, engagement, konversi, dan query. Halaman sepi tidak selalu buruk, tetapi perlu dipahami alasannya." },
+      { heading: "Pilih Tindakan", body: "Perbarui, gabungkan, arahkan, atau hapus halaman berdasarkan bukti dan hubungan dengan tujuan website." },
+      { heading: "Dokumentasikan Perubahan", body: "Catat apa yang diubah dan kapan. Dokumentasi membantu menilai dampak serta mencegah pekerjaan berulang." }
+    ],
+    checklist: ["Ekspor daftar URL.", "Periksa informasi yang sudah lama.", "Bandingkan performa halaman.", "Tentukan aksi untuk tiap URL.", "Jadwalkan audit berikutnya."], conclusion: "Audit konten membuat website tetap akurat, berguna, dan selaras dengan arah bisnis."
+  },
+  {
+    id: "45", slug: "fotografi-produk-untuk-toko-online", title: "Fotografi Produk untuk Toko Online yang Lebih Meyakinkan",
+    excerpt: "Tingkatkan kepercayaan pembeli dengan foto produk yang konsisten, jelas, dan menunjukkan detail penting.", image: "https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=1200&q=80", imageAlt: "Produk yang dipotret untuk katalog toko online", date: "11 Okt 2025", category: "E-commerce", readTime: "8 min read",
+    introduction: "Pelanggan tidak dapat menyentuh produk melalui layar. Foto menjadi sumber utama untuk menilai ukuran, bahan, warna, dan kualitas sebelum membuat keputusan.",
+    context: "Fotografi produk yang baik tidak selalu membutuhkan studio mahal. Konsistensi cahaya, latar, sudut, dan skala sering lebih penting daripada peralatan yang rumit.",
+    sections: [
+      { heading: "Tampilkan Sudut Penting", body: "Gunakan foto utama yang jelas, lalu tambahkan sudut yang menjawab pertanyaan pembeli tentang detail dan penggunaan." },
+      { heading: "Jaga Warna dan Skala", body: "Gunakan pencahayaan konsisten serta objek pembanding ketika ukuran penting bagi keputusan pembelian." },
+      { heading: "Gunakan Latar yang Bersih", body: "Latar sederhana membantu produk menjadi fokus dan membuat katalog terlihat lebih profesional." },
+      { heading: "Optimalkan untuk Web", body: "Pangkas, kompres, dan gunakan format yang sesuai agar foto tajam tanpa memperlambat halaman." },
+      { heading: "Tambahkan Konteks Penggunaan", body: "Foto lifestyle dapat membantu pembeli membayangkan produk dalam situasi nyata, selama tetap disertai foto detail." }
+    ],
+    checklist: ["Buat panduan foto yang konsisten.", "Ambil foto dari beberapa sudut.", "Periksa warna dan ukuran file.", "Tambahkan alt text deskriptif.", "Uji foto pada layar ponsel."], conclusion: "Foto produk yang baik mengurangi ketidakpastian dan membantu pelanggan membeli dengan lebih percaya diri."
+  },
+  {
+    id: "46", slug: "deskripsi-produk-yang-menjual", title: "Menulis Deskripsi Produk yang Informatif dan Menjual",
+    excerpt: "Gabungkan detail teknis, manfaat, dan konteks penggunaan agar deskripsi produk membantu keputusan pembeli.", image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80", imageAlt: "Produk yang siap dijelaskan dalam katalog online", date: "16 Okt 2025", category: "E-commerce", readTime: "8 min read",
+    introduction: "Deskripsi produk yang baik menjawab pertanyaan sebelum pelanggan perlu menghubungi penjual. Ia harus informatif, mudah dipindai, dan tetap menggunakan bahasa yang dekat dengan kebutuhan pembeli.",
+    context: "Menyalin deskripsi supplier dapat membuat toko terlihat generik. Deskripsi yang ditulis ulang memberi ruang untuk menjelaskan manfaat, konteks, dan perbedaan produk secara lebih jujur.",
+    sections: [
+      { heading: "Mulai dari Manfaat", body: "Jelaskan masalah atau aktivitas yang dibantu produk sebelum masuk ke daftar spesifikasi." },
+      { heading: "Sertakan Detail Keputusan", body: "Ukuran, bahan, kompatibilitas, isi paket, dan perawatan membantu pembeli mengurangi keraguan." },
+      { heading: "Gunakan Struktur", body: "Heading, bullet, dan paragraf pendek membuat informasi mudah ditemukan pada layar kecil." },
+      { heading: "Atasi Keberatan", body: "Jelaskan keterbatasan, waktu kirim, variasi warna, atau kondisi penggunaan agar ekspektasi tetap realistis." },
+      { heading: "Perbarui saat Produk Berubah", body: "Deskripsi harus mengikuti stok, varian, harga, dan kebijakan terbaru agar tidak mengecewakan pembeli." }
+    ],
+    checklist: ["Tulis manfaat utama produk.", "Lengkapi spesifikasi penting.", "Gunakan bullet untuk detail.", "Jelaskan batasan secara jujur.", "Tinjau deskripsi setiap ada perubahan produk."], conclusion: "Deskripsi produk yang kuat membuat pelanggan lebih paham dan mengurangi pertanyaan berulang."
+  },
+  {
+    id: "47", slug: "customer-journey-website", title: "Memetakan Customer Journey untuk Memperbaiki Website",
+    excerpt: "Gunakan peta perjalanan pelanggan untuk menemukan kebutuhan, keraguan, dan peluang perbaikan di setiap tahap.", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80", imageAlt: "Tim memetakan perjalanan pelanggan", date: "21 Okt 2025", category: "Strategi Digital", readTime: "8 min read",
+    introduction: "Pengunjung tidak tiba di website dengan pengetahuan dan kebutuhan yang sama. Customer journey membantu bisnis memahami bagaimana orang menemukan, menilai, membeli, dan kembali menggunakan layanan.",
+    context: "Peta perjalanan bukan dokumen dekoratif. Ia berguna ketika menghubungkan tahap pelanggan dengan pertanyaan, emosi, kanal, dan perbaikan yang dapat dilakukan tim.",
+    sections: [
+      { heading: "Tentukan Persona Utama", body: "Pilih kelompok pelanggan yang paling penting dan gunakan data, bukan asumsi, untuk menggambarkan kebutuhannya." },
+      { heading: "Catat Titik Kontak", body: "Masukkan pencarian, media sosial, website, chat, meeting, pembayaran, dan dukungan setelah pembelian." },
+      { heading: "Tulis Pertanyaan di Tiap Tahap", body: "Pertanyaan sebelum membeli berbeda dengan pertanyaan setelah menerima layanan. Konten harus mengikuti tahap tersebut." },
+      { heading: "Cari Momen Hambatan", body: "Perhatikan ketika pelanggan menunggu, mengulang data, atau tidak menemukan bukti yang diperlukan." },
+      { heading: "Hubungkan dengan Owner", body: "Setiap perbaikan perlu memiliki pemilik dan indikator agar peta perjalanan menghasilkan tindakan." }
+    ],
+    checklist: ["Pilih persona utama.", "Daftar semua titik kontak.", "Tulis pertanyaan pelanggan.", "Tandai hambatan terbesar.", "Tetapkan aksi dan pemiliknya."], conclusion: "Customer journey membuat perbaikan website berangkat dari pengalaman, bukan hanya dari halaman."
+  },
+  {
+    id: "48", slug: "customer-support-website", title: "Membangun Pusat Bantuan di Website untuk Pelanggan",
+    excerpt: "Kurangi pertanyaan berulang dengan pusat bantuan yang terstruktur, mudah dicari, dan selalu diperbarui.", image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=80", imageAlt: "Tim customer support bekerja bersama", date: "26 Okt 2025", category: "Bisnis Digital", readTime: "8 min read",
+    introduction: "Pusat bantuan dapat membantu pelanggan menyelesaikan masalah tanpa menunggu balasan tim. Ia juga memberi bisnis kesempatan menjelaskan proses dan batas layanan dengan cara yang konsisten.",
+    context: "Pusat bantuan yang baik bukan gudang artikel teknis. Isinya disusun berdasarkan pertanyaan nyata, menggunakan bahasa pelanggan, dan menyediakan jalur eskalasi ketika jawaban mandiri tidak cukup.",
+    sections: [
+      { heading: "Kumpulkan Pertanyaan Berulang", body: "Gunakan inbox, chat, dan tiket dukungan sebagai sumber topik. Prioritaskan pertanyaan yang paling sering menghabiskan waktu tim." },
+      { heading: "Kelompokkan berdasarkan Tugas", body: "Kategori seperti mulai, pembayaran, penggunaan, dan masalah membuat pengunjung menemukan jawaban dengan lebih cepat." },
+      { heading: "Tulis Langkah yang Bisa Diikuti", body: "Gunakan instruksi bernomor, screenshot seperlunya, dan bahasa yang tidak menyalahkan pengguna." },
+      { heading: "Tampilkan Status Konten", body: "Tanggal pembaruan membantu pelanggan mengetahui bahwa artikel masih relevan." },
+      { heading: "Hubungkan ke Bantuan Manusia", body: "Berikan kontak ketika masalah membutuhkan akses akun, keputusan khusus, atau penanganan sensitif." }
+    ],
+    checklist: ["Ekspor pertanyaan dukungan.", "Kelompokkan berdasarkan tujuan.", "Tulis langkah dengan bahasa sederhana.", "Tambahkan tanggal pembaruan.", "Sediakan jalur eskalasi."], conclusion: "Pusat bantuan yang terawat mempercepat jawaban dan membuat pengalaman pelanggan lebih mandiri."
+  },
+  {
+    id: "49", slug: "onboarding-pelanggan-digital", title: "Onboarding Pelanggan Digital yang Membuat Mereka Bertahan",
+    excerpt: "Rancang pengalaman awal yang membantu pelanggan memahami layanan dan mendapatkan manfaat lebih cepat.", image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80", imageAlt: "Tim membantu proses onboarding pelanggan", date: "31 Okt 2025", category: "Strategi Digital", readTime: "8 min read",
+    introduction: "Pengalaman setelah pelanggan mendaftar atau membeli menentukan apakah mereka dapat merasakan manfaat. Onboarding yang jelas mengurangi kebingungan dan membuat langkah pertama terasa ringan.",
+    context: "Onboarding tidak harus menjadi rangkaian email panjang. Yang penting adalah mengarahkan pelanggan menuju momen manfaat pertama dengan informasi, contoh, dan bantuan yang tepat.",
+    sections: [
+      { heading: "Tentukan Momen Aktivasi", body: "Cari tindakan yang menunjukkan pelanggan mulai mendapatkan nilai, lalu arahkan mereka ke tindakan tersebut." },
+      { heading: "Pecah Langkah Besar", body: "Instruksi kecil dengan urutan jelas lebih mudah diikuti daripada penjelasan panjang sekaligus." },
+      { heading: "Gunakan Checklist", body: "Checklist membantu pelanggan melihat progres dan mengetahui apa yang belum selesai." },
+      { heading: "Berikan Contoh Nyata", body: "Template, demo, dan contoh penggunaan mengurangi waktu pelanggan untuk menebak cara memulai." },
+      { heading: "Dengarkan Hambatan", body: "Pertanyaan onboarding adalah sumber riset produk. Gunakan pola tersebut untuk menyederhanakan pengalaman." }
+    ],
+    checklist: ["Definisikan aktivasi pelanggan.", "Susun tiga langkah pertama.", "Buat contoh atau template.", "Kirim pengingat yang relevan.", "Catat titik pelanggan berhenti."], conclusion: "Onboarding yang baik membuat pelanggan merasa dibantu sejak interaksi pertama."
+  },
+  {
+    id: "50", slug: "retensi-pelanggan-dengan-konten", title: "Meningkatkan Retensi Pelanggan dengan Konten yang Relevan",
+    excerpt: "Gunakan konten setelah pembelian untuk membantu pelanggan mendapatkan hasil dan tetap terhubung dengan bisnis.", image: "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1200&q=80", imageAlt: "Tim membahas kebutuhan pelanggan", date: "05 Nov 2025", category: "Marketing", readTime: "8 min read",
+    introduction: "Pelanggan bertahan ketika mereka terus merasakan manfaat, bukan hanya ketika menerima promo. Konten yang tepat dapat membantu penggunaan, memberi inspirasi, dan mengingatkan pelanggan pada nilai layanan.",
+    context: "Retensi membutuhkan pemahaman tentang tahap setelah transaksi. Konten harus membantu pelanggan melewati hambatan berikutnya, bukan mengulang pesan penjualan yang sama.",
+    sections: [
+      { heading: "Pahami Tahap Pasca-Pembelian", body: "Kebutuhan pelanggan berubah setelah membeli. Buat konten untuk penggunaan awal, pemeliharaan, dan pengembangan." },
+      { heading: "Kirim Tips yang Kontekstual", body: "Tips yang berhubungan dengan produk atau layanan terasa lebih berguna daripada newsletter umum." },
+      { heading: "Tampilkan Peluang Lanjutan", body: "Rekomendasikan fitur atau layanan tambahan ketika pelanggan sudah siap, bukan sebelum memahami manfaat dasar." },
+      { heading: "Rayakan Kemajuan", body: "Cerita hasil dan milestone dapat membantu pelanggan melihat nilai yang sudah diperoleh." },
+      { heading: "Ukur Keterlibatan", body: "Pantau penggunaan, pembelian ulang, balasan, dan alasan berhenti untuk memperbaiki konten retensi." }
+    ],
+    checklist: ["Petakan tahap setelah pembelian.", "Buat tips untuk kebutuhan nyata.", "Kirim berdasarkan konteks.", "Rekomendasikan langkah lanjutan dengan wajar.", "Tanyakan alasan pelanggan bertahan."], conclusion: "Konten retensi membantu pelanggan berhasil sehingga hubungan dengan bisnis memiliki alasan untuk berlanjut."
+  },
+  {
+    id: "51", slug: "review-online-dan-reputasi-bisnis", title: "Mengelola Review Online untuk Menjaga Reputasi Bisnis",
+    excerpt: "Tanggapi ulasan pelanggan secara profesional dan gunakan masukan tersebut untuk meningkatkan layanan.", image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80", imageAlt: "Tim membahas masukan pelanggan", date: "10 Nov 2025", category: "Bisnis Digital", readTime: "8 min read",
+    introduction: "Ulasan online menjadi bukti sosial yang dibaca sebelum pelanggan menghubungi bisnis. Reputasi tidak hanya ditentukan oleh jumlah bintang, tetapi juga oleh cara bisnis merespons pengalaman yang dibagikan.",
+    context: "Manajemen review membutuhkan proses agar respons tetap cepat, sopan, dan tidak defensif. Masukan negatif dapat menjadi sumber perbaikan ketika ditangani dengan serius.",
+    sections: [
+      { heading: "Minta Review pada Waktu Tepat", body: "Tanyakan setelah pelanggan mengalami manfaat atau layanan selesai. Permintaan yang relevan menghasilkan ulasan yang lebih bermakna." },
+      { heading: "Balas dengan Konteks", body: "Sebutkan bagian pengalaman yang relevan tanpa membocorkan data pribadi. Respons generik terasa tidak tulus." },
+      { heading: "Tangani Keluhan di Kanal Tepat", body: "Ajak pelanggan melanjutkan detail sensitif melalui kontak pribadi, tetapi tetap akui masalah secara publik." },
+      { heading: "Cari Pola", body: "Satu keluhan mungkin insidental, tetapi pola berulang menunjukkan proses yang perlu diperbaiki." },
+      { heading: "Jangan Membeli Ulasan", body: "Ulasan palsu merusak kepercayaan dan dapat melanggar kebijakan platform. Fokus pada pengalaman yang memang layak dibagikan." }
+    ],
+    checklist: ["Tentukan waktu meminta review.", "Buat panduan respons.", "Jaga data pribadi pelanggan.", "Catat keluhan yang berulang.", "Perbaiki proses berdasarkan pola."], conclusion: "Reputasi yang sehat dibangun dari layanan yang baik dan respons yang bertanggung jawab."
+  },
+  {
+    id: "52", slug: "integrasi-payment-gateway-website", title: "Memilih Payment Gateway untuk Website Bisnis",
+    excerpt: "Pertimbangkan biaya, metode pembayaran, keamanan, dan pengalaman checkout sebelum memilih payment gateway.", image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80", imageAlt: "Pembayaran digital melalui perangkat online", date: "15 Nov 2025", category: "Teknologi", readTime: "8 min read",
+    introduction: "Payment gateway dapat membuat pembayaran online lebih praktis, tetapi pilihan yang kurang tepat dapat menambah biaya, gagal transaksi, atau membingungkan pelanggan.",
+    context: "Bisnis perlu menilai metode pembayaran yang benar-benar digunakan pelanggan, dukungan teknis, settlement, refund, serta kemampuan integrasi dengan alur yang sudah ada.",
+    sections: [
+      { heading: "Kenali Metode Pembayaran", body: "Bandingkan transfer, virtual account, kartu, dompet digital, dan QR sesuai kebiasaan audiens." },
+      { heading: "Hitung Biaya Total", body: "Periksa biaya transaksi, settlement, refund, chargeback, dan biaya tambahan yang mungkin muncul." },
+      { heading: "Prioritaskan Keamanan", body: "Gunakan penyedia resmi dan ikuti praktik keamanan agar data pembayaran tidak dikelola secara sembrono." },
+      { heading: "Rancang Status Transaksi", body: "Pelanggan perlu tahu apakah pembayaran berhasil, menunggu, atau gagal serta apa langkah berikutnya." },
+      { heading: "Uji Kondisi Gagal", body: "Simulasikan timeout, pembayaran ganda, pembatalan, dan refund sebelum membuka fitur untuk publik." }
+    ],
+    checklist: ["Petakan metode pembayaran pelanggan.", "Bandingkan biaya secara menyeluruh.", "Periksa dokumentasi dan dukungan.", "Rancang pesan status transaksi.", "Uji alur gagal dan refund."], conclusion: "Payment gateway yang tepat membuat transaksi terasa aman bagi pelanggan dan mudah dikelola bisnis."
+  },
+  {
+    id: "53", slug: "api-dan-integrasi-website", title: "Memahami API dan Integrasi Website untuk Bisnis",
+    excerpt: "Kenali cara sistem saling terhubung dan pertanyaan penting sebelum menambahkan integrasi ke website.", image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80", imageAlt: "Server dan infrastruktur teknologi digital", date: "20 Nov 2025", category: "Teknologi", readTime: "8 min read",
+    introduction: "API memungkinkan website bertukar data dengan layanan lain seperti pembayaran, CRM, kalender, email, atau sistem inventori. Integrasi yang tepat dapat mengurangi pekerjaan manual dan kesalahan input.",
+    context: "Namun setiap integrasi menambah ketergantungan, biaya, dan kebutuhan pemantauan. Perencanaan perlu mencakup alur data, keamanan, kegagalan, dan pemilik sistem.",
+    sections: [
+      { heading: "Mulai dari Proses Manual", body: "Pahami pekerjaan yang ingin diotomatisasi sebelum memilih API. Tidak semua pekerjaan manual layak diganti dengan integrasi." },
+      { heading: "Peta Data yang Dipindahkan", body: "Tentukan data sumber, tujuan, format, frekuensi, dan siapa yang bertanggung jawab atas akurasinya." },
+      { heading: "Periksa Dokumentasi", body: "Dokumentasi yang jelas, sandbox, rate limit, dan dukungan membantu mengurangi risiko implementasi." },
+      { heading: "Siapkan Penanganan Error", body: "Sistem harus memberi tahu tim ketika integrasi gagal dan memiliki cara mencoba ulang tanpa menggandakan data." },
+      { heading: "Jaga Credential", body: "Simpan API key di environment yang aman dan batasi izin sesuai kebutuhan integrasi." }
+    ],
+    checklist: ["Tentukan proses yang ingin diotomatisasi.", "Peta data dan pemiliknya.", "Baca dokumentasi API.", "Rancang retry dan notifikasi error.", "Audit keamanan credential."], conclusion: "Integrasi yang profesional menyederhanakan pekerjaan tanpa mengorbankan kendali dan keamanan data."
+  },
+  {
+    id: "54", slug: "dashboard-bisnis-untuk-pengambilan-keputusan", title: "Membangun Dashboard Bisnis yang Membantu Keputusan",
+    excerpt: "Susun dashboard yang ringkas agar pemilik bisnis dapat melihat masalah dan peluang tanpa tenggelam dalam angka.", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80", imageAlt: "Dashboard bisnis dengan grafik dan metrik", date: "25 Nov 2025", category: "Data", readTime: "8 min read",
+    introduction: "Dashboard yang baik bukan kumpulan grafik paling banyak. Ia membantu orang menjawab pertanyaan bisnis tertentu dan mengetahui tindakan apa yang perlu dilakukan setelah melihat data.",
+    context: "Kejelasan metrik, periode, sumber data, dan definisi menjadi lebih penting daripada dekorasi. Dashboard harus disesuaikan dengan peran orang yang menggunakannya.",
+    sections: [
+      { heading: "Mulai dari Keputusan", body: "Tentukan keputusan yang perlu dibuat setiap minggu atau bulan. Metrik dipilih untuk membantu keputusan tersebut." },
+      { heading: "Batasi Jumlah Metrik", body: "Tampilkan angka paling penting dan sediakan detail di halaman berikutnya. Terlalu banyak metrik mengaburkan prioritas." },
+      { heading: "Tampilkan Konteks", body: "Bandingkan target, periode sebelumnya, atau rata-rata agar angka tidak berdiri sendiri." },
+      { heading: "Definisikan Istilah", body: "Pastikan tim memiliki pemahaman yang sama tentang lead, pelanggan aktif, konversi, dan pendapatan." },
+      { heading: "Jaga Kualitas Data", body: "Periksa sumber, waktu pembaruan, dan anomali agar keputusan tidak dibuat dari data yang salah." }
+    ],
+    checklist: ["Tulis keputusan yang ingin dibantu.", "Pilih metrik inti.", "Tambahkan target dan pembanding.", "Dokumentasikan definisi metrik.", "Tetapkan jadwal review kualitas data."], conclusion: "Dashboard menjadi bernilai ketika membuat percakapan dan keputusan bisnis lebih cepat."
+  },
+  {
+    id: "55", slug: "digital-product-roadmap", title: "Membuat Product Roadmap Digital yang Realistis",
+    excerpt: "Susun prioritas fitur berdasarkan nilai pelanggan, kemampuan tim, dan pembelajaran yang ingin didapatkan.", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80", imageAlt: "Tim menyusun roadmap produk digital", date: "30 Nov 2025", category: "Produk Digital", readTime: "8 min read",
+    introduction: "Product roadmap membantu tim melihat arah produk tanpa menganggap semua janji sebagai jadwal yang tidak dapat berubah. Roadmap yang sehat menunjukkan tujuan, prioritas, dan alasan di balik pekerjaan.",
+    context: "Kebutuhan pelanggan, kapasitas teknis, dan pembelajaran baru dapat mengubah prioritas. Karena itu, roadmap sebaiknya berorientasi pada hasil, bukan daftar fitur yang kaku.",
+    sections: [
+      { heading: "Tulis Outcome", body: "Jelaskan perubahan yang ingin dirasakan pengguna atau bisnis, bukan hanya fitur yang akan dibuat." },
+      { heading: "Gabungkan Sumber Insight", body: "Gunakan feedback, data penggunaan, sales, dukungan, dan batasan teknis untuk mengambil prioritas." },
+      { heading: "Bedakan Horizon", body: "Pisahkan pekerjaan sekarang, berikutnya, dan kemungkinan masa depan agar ekspektasi tetap realistis." },
+      { heading: "Validasi sebelum Membangun", body: "Prototype, wawancara, atau eksperimen kecil dapat mengurangi risiko membuat fitur yang tidak dibutuhkan." },
+      { heading: "Komunikasikan Perubahan", body: "Ketika prioritas berubah, jelaskan alasannya dan dampaknya kepada pihak yang berkepentingan." }
+    ],
+    checklist: ["Tulis outcome utama.", "Kumpulkan bukti dari pengguna.", "Susun horizon waktu.", "Validasi ide berisiko tinggi.", "Dokumentasikan perubahan prioritas."], conclusion: "Roadmap produk yang baik memberi arah tanpa menghilangkan ruang untuk belajar."
+  },
+  {
+    id: "56", slug: "user-research-untuk-website", title: "User Research Sederhana untuk Memperbaiki Website",
+    excerpt: "Gunakan wawancara, observasi, dan pengujian tugas untuk memahami masalah pengguna sebelum mengubah desain.", image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80", imageAlt: "Tim melakukan riset bersama pengguna", date: "05 Des 2025", category: "Desain", readTime: "8 min read",
+    introduction: "Website sering dibangun berdasarkan asumsi internal. User research membantu tim mendengar bahasa pengguna, melihat kebiasaan nyata, dan menemukan masalah yang tidak terlihat dari laporan analytics.",
+    context: "Riset tidak harus mahal atau formal. Beberapa percakapan dan pengujian tugas yang terarah sudah dapat membuka insight penting untuk prioritas desain.",
+    sections: [
+      { heading: "Tentukan Pertanyaan", body: "Riset lebih fokus ketika tim tahu keputusan apa yang ingin dibantu, bukan hanya ingin mengumpulkan opini." },
+      { heading: "Pilih Peserta yang Relevan", body: "Cari orang yang benar-benar mewakili pengguna atau calon pengguna, bukan hanya rekan kerja yang sudah memahami sistem." },
+      { heading: "Amati Tugas", body: "Minta peserta mencari harga, menghubungi bisnis, atau menemukan informasi. Perhatikan tindakan, bukan hanya komentar." },
+      { heading: "Hindari Pertanyaan Mengarahkan", body: "Gunakan pertanyaan terbuka agar peserta tidak terdorong memberi jawaban yang ingin didengar tim." },
+      { heading: "Sintesis Pola", body: "Kelompokkan masalah yang berulang dan bedakan antara preferensi pribadi dengan hambatan yang memengaruhi banyak orang." }
+    ],
+    checklist: ["Tulis pertanyaan riset.", "Rekrut peserta yang relevan.", "Gunakan tugas nyata.", "Catat perilaku dan kutipan.", "Kelompokkan pola sebelum membuat keputusan."], conclusion: "Riset pengguna membuat desain lebih rendah asumsi dan lebih dekat dengan kebutuhan nyata."
+  },
+  {
+    id: "57", slug: "design-system-untuk-tim-kecil", title: "Design System untuk Tim Kecil: Mulai dari Mana",
+    excerpt: "Bangun fondasi komponen dan aturan visual yang cukup ringan untuk menjaga konsistensi tanpa memperlambat tim.", image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1200&q=80", imageAlt: "Kolase desain antarmuka digital", date: "10 Des 2025", category: "Desain", readTime: "8 min read",
+    introduction: "Design system membantu tim membangun halaman yang konsisten dan mempercepat perubahan. Tim kecil tidak harus membuat dokumentasi besar; mulailah dari komponen yang paling sering digunakan.",
+    context: "Sistem desain yang terlalu rumit dapat menjadi beban. Fokuskan aturan pada keputusan yang berulang dan pastikan komponen tetap mudah dipakai oleh seluruh tim.",
+    sections: [
+      { heading: "Inventarisasi Komponen", body: "Cari tombol, input, kartu, heading, warna, dan spacing yang berulang. Mulai dari perbedaan yang paling sering menimbulkan masalah." },
+      { heading: "Tetapkan Token Dasar", body: "Variabel warna, tipografi, radius, dan jarak membuat perubahan global lebih mudah dan konsisten." },
+      { heading: "Buat Komponen Fleksibel", body: "Komponen perlu memiliki variasi yang cukup untuk kebutuhan umum tanpa menerima terlalu banyak konfigurasi." },
+      { heading: "Dokumentasikan Penggunaan", body: "Jelaskan kapan komponen digunakan, kapan tidak, dan contoh isinya dengan bahasa sederhana." },
+      { heading: "Rawat Bersama Produk", body: "Review sistem ketika produk berubah agar aturan tidak tertinggal dari kebutuhan nyata." }
+    ],
+    checklist: ["Daftar komponen berulang.", "Buat variabel visual dasar.", "Pilih komponen prioritas.", "Dokumentasikan contoh penggunaan.", "Review saat fitur baru dibuat."], conclusion: "Design system kecil yang dipakai konsisten lebih bernilai daripada sistem besar yang tidak dirawat."
+  },
+  {
+    id: "58", slug: "microcopy-untuk-formulir-website", title: "Microcopy Formulir Website yang Membantu Pengguna",
+    excerpt: "Perbaiki label, placeholder, instruksi, dan pesan error agar formulir terasa jelas dan tidak membuat pengguna ragu.", image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=80", imageAlt: "Tim menyusun pengalaman formulir digital", date: "15 Des 2025", category: "UX Writing", readTime: "8 min read",
+    introduction: "Formulir sering menjadi titik terakhir sebelum pelanggan menghubungi atau membeli. Microcopy yang jelas dapat mengurangi rasa ragu, kesalahan input, dan pertanyaan tambahan.",
+    context: "Tulisan kecil di sekitar input memiliki tugas besar: menjelaskan data yang diperlukan, alasan permintaan, format, dan apa yang terjadi setelah tombol ditekan.",
+    sections: [
+      { heading: "Gunakan Label Permanen", body: "Label membantu pengguna mengingat konteks ketika input sudah terisi. Jangan hanya mengandalkan placeholder." },
+      { heading: "Jelaskan Format", body: "Contoh nomor telepon, ukuran file, atau format tanggal mengurangi kesalahan sebelum submit." },
+      { heading: "Tulis Pesan Error yang Spesifik", body: "Jelaskan field yang bermasalah dan cara memperbaikinya, bukan sekadar menampilkan error umum." },
+      { heading: "Berikan Ekspektasi", body: "Tulis waktu respons, penggunaan data, atau langkah setelah pengiriman agar pengguna merasa aman." },
+      { heading: "Gunakan Bahasa Manusia", body: "Hindari istilah teknis dan nada menyalahkan. Formulir adalah percakapan singkat dengan pelanggan." }
+    ],
+    checklist: ["Beri label setiap input.", "Tambahkan contoh format.", "Tulis error yang dapat diperbaiki.", "Jelaskan langkah setelah submit.", "Uji dengan orang yang belum mengenal form."], conclusion: "Microcopy yang baik membuat formulir terasa seperti bantuan, bukan ujian bagi pengguna."
+  },
+  {
+    id: "59", slug: "notifikasi-website-yang-tidak-mengganggu", title: "Merancang Notifikasi Website yang Tidak Mengganggu",
+    excerpt: "Gunakan banner, toast, dan pesan status secara bijak agar pengguna memahami sistem tanpa terganggu.", image: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80", imageAlt: "Pemberitahuan digital pada perangkat pengguna", date: "20 Des 2025", category: "UX", readTime: "8 min read",
+    introduction: "Notifikasi membantu sistem memberi tahu status, kesalahan, atau peluang tindakan. Jika muncul terlalu sering atau tidak jelas, notifikasi justru mengganggu dan menurunkan kepercayaan.",
+    context: "Setiap notifikasi perlu memiliki tujuan, tingkat urgensi, dan tindakan yang dapat dipahami. Desain yang baik juga menghormati perhatian pengguna.",
+    sections: [
+      { heading: "Bedakan Tingkat Urgensi", body: "Informasi, sukses, peringatan, dan error membutuhkan tampilan serta tindakan yang berbeda." },
+      { heading: "Tulis Pesan yang Operasional", body: "Pesan harus menjelaskan apa yang terjadi dan apa yang dapat dilakukan pengguna berikutnya." },
+      { heading: "Hindari Notifikasi Ganda", body: "Satu tindakan sebaiknya tidak menghasilkan banyak pesan yang menyampaikan informasi sama." },
+      { heading: "Berikan Kontrol", body: "Pengguna perlu dapat menutup, mengatur, atau menunda notifikasi yang tidak mendesak." },
+      { heading: "Uji pada Mobile", body: "Notifikasi yang terlihat baik di desktop dapat menutup konten atau tombol penting pada layar kecil." }
+    ],
+    checklist: ["Klasifikasikan urgensi pesan.", "Tulis status dengan tindakan jelas.", "Hindari duplikasi notifikasi.", "Sediakan kontrol pengguna.", "Uji ukuran dan posisi di mobile."], conclusion: "Notifikasi yang baik memberi kepastian tanpa mengambil alih perhatian pengguna."
+  },
+  {
+    id: "60", slug: "website-dan-social-proof", title: "Memakai Social Proof di Website secara Jujur",
+    excerpt: "Tampilkan testimonial, angka, studi kasus, dan bukti lain dengan konteks agar kepercayaan tumbuh secara wajar.", image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=80", imageAlt: "Tim profesional berkolaborasi dalam proyek", date: "25 Des 2025", category: "Marketing", readTime: "8 min read",
+    introduction: "Calon pelanggan sering mencari bukti bahwa bisnis dapat menepati janji. Social proof membantu menjawab keraguan dengan pengalaman pelanggan, hasil, dan konteks yang dapat dipahami.",
+    context: "Bukti sosial yang terlalu umum atau tidak jelas justru terasa seperti dekorasi. Kualitas, relevansi, dan izin publikasi harus diperhatikan agar tetap profesional.",
+    sections: [
+      { heading: "Pilih Bukti yang Relevan", body: "Tampilkan contoh dari jenis pelanggan atau kebutuhan yang mirip dengan audiens saat ini." },
+      { heading: "Tambahkan Konteks", body: "Sebutkan masalah, proses, periode, atau hasil agar testimonial tidak terdengar seperti pujian kosong." },
+      { heading: "Gunakan Beragam Format", body: "Studi kasus, screenshot, angka, logo, dan kutipan dapat bekerja bersama ketika masing-masing memiliki fungsi jelas." },
+      { heading: "Minta Izin", body: "Pastikan pelanggan menyetujui penggunaan nama, foto, logo, atau hasil sebelum dipublikasikan." },
+      { heading: "Jaga Kejujuran", body: "Jangan memotong konteks atau menyajikan angka yang tidak dapat dijelaskan. Kepercayaan dibangun dari transparansi." }
+    ],
+    checklist: ["Pilih bukti untuk audiens utama.", "Tambahkan konteks hasil.", "Minta izin publikasi.", "Tautkan ke studi kasus lengkap.", "Perbarui bukti secara berkala."], conclusion: "Social proof yang jujur membantu calon pelanggan menilai kecocokan dengan lebih percaya diri."
+  },
+  {
+    id: "61", slug: "freelance-vs-agency-website", title: "Memilih Freelancer atau Agency untuk Proyek Website",
+    excerpt: "Bandingkan kebutuhan, risiko, komunikasi, dan kapasitas sebelum memilih partner pengembangan website.", image: "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1200&q=80", imageAlt: "Tim dan klien berdiskusi tentang proyek", date: "30 Des 2025", category: "Bisnis Digital", readTime: "8 min read",
+    introduction: "Pilihan antara freelancer dan agency bergantung pada ruang lingkup, tingkat kompleksitas, anggaran, serta kebutuhan dukungan. Tidak ada jawaban yang selalu benar untuk semua bisnis.",
+    context: "Yang terpenting adalah menemukan partner yang memahami tujuan, berkomunikasi jelas, dan mampu mempertanggungjawabkan proses serta hasil.",
+    sections: [
+      { heading: "Nilai Kompleksitas Proyek", body: "Proyek sederhana mungkin cukup dengan satu spesialis, sedangkan sistem kompleks membutuhkan beberapa disiplin dan koordinasi." },
+      { heading: "Periksa Portofolio Relevan", body: "Cari pengalaman yang menunjukkan jenis masalah, bukan hanya tampilan visual yang menarik." },
+      { heading: "Tanyakan Proses", body: "Pahami discovery, desain, pengembangan, revisi, pengujian, dan serah terima sebelum memutuskan." },
+      { heading: "Bicarakan Dukungan", body: "Pastikan ada kejelasan tentang maintenance, bug, pembaruan, dan waktu respons setelah launch." },
+      { heading: "Bandingkan Penawaran Secara Adil", body: "Jangan hanya membandingkan harga. Periksa ruang lingkup, risiko, komunikasi, dan nilai jangka panjang." }
+    ],
+    checklist: ["Tulis kebutuhan dan kompleksitas.", "Bandingkan proyek yang relevan.", "Minta penjelasan proses.", "Tanyakan dukungan pascarilis.", "Bandingkan scope sebelum harga."], conclusion: "Partner yang tepat adalah yang paling sesuai dengan kebutuhan, bukan sekadar yang menawarkan harga terendah."
+  },
+  {
+    id: "62", slug: "kontrak-proyek-website-yang-jelas", title: "Poin Penting dalam Kontrak Proyek Website",
+    excerpt: "Buat kerja sama lebih aman dengan ruang lingkup, pembayaran, hak cipta, dan dukungan yang tertulis jelas.", image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80", imageAlt: "Dokumen kontrak proyek di meja kerja", date: "04 Jan 2026", category: "Bisnis Digital", readTime: "8 min read",
+    introduction: "Kontrak membantu klien dan penyedia jasa memiliki pemahaman yang sama sebelum pekerjaan dimulai. Dokumen yang jelas mengurangi konflik dan membuat keputusan proyek lebih mudah ditelusuri.",
+    context: "Kontrak tidak harus penuh bahasa rumit. Yang penting, bagian yang berpotensi menimbulkan perbedaan tafsir seperti scope, pembayaran, revisi, konten, dan serah terima dijelaskan.",
+    sections: [
+      { heading: "Rinci Ruang Lingkup", body: "Tuliskan halaman, fitur, integrasi, konten, dan output yang termasuk. Pisahkan pekerjaan tambahan." },
+      { heading: "Tetapkan Tahap Pembayaran", body: "Gunakan milestone yang terhubung dengan hasil atau tahap kerja agar arus pembayaran dan ekspektasi jelas." },
+      { heading: "Atur Revisi", body: "Jelaskan jumlah putaran, jenis perubahan, serta cara menyetujui hasil pada setiap tahap." },
+      { heading: "Bahas Hak Kekayaan Intelektual", body: "Tentukan kapan hak atas desain, kode, konten, dan aset berpindah serta apa yang tetap menjadi milik pihak ketiga." },
+      { heading: "Tulis Ketentuan Dukungan", body: "Sebutkan masa garansi bug, maintenance, waktu respons, dan biaya setelah proyek selesai." }
+    ],
+    checklist: ["Tuliskan scope dalam lampiran.", "Tetapkan milestone pembayaran.", "Definisikan revisi.", "Atur hak aset dan kode.", "Jelaskan dukungan pascaproyek."], conclusion: "Kontrak yang jelas melindungi hubungan kerja dengan membuat harapan kedua pihak terlihat sejak awal."
+  },
+  {
+    id: "63", slug: "backup-data-website-bisnis", title: "Strategi Backup Data Website untuk Bisnis",
+    excerpt: "Siapkan backup yang aman dan dapat dipulihkan agar gangguan teknis tidak menghentikan operasional bisnis.", image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80", imageAlt: "Infrastruktur penyimpanan data digital", date: "09 Jan 2026", category: "Teknologi", readTime: "8 min read",
+    introduction: "Backup adalah jaring pengaman ketika data rusak, sistem gagal, akun bermasalah, atau perubahan tidak sengaja menghapus pekerjaan. Yang penting bukan hanya memiliki salinan, tetapi mampu memulihkannya.",
+    context: "Strategi backup perlu mempertimbangkan frekuensi perubahan, waktu pemulihan, tempat penyimpanan, serta siapa yang bertanggung jawab ketika insiden terjadi.",
+    sections: [
+      { heading: "Tentukan Data Kritis", body: "Pisahkan database, upload, konfigurasi, kode, dan dokumen yang diperlukan untuk menjalankan website." },
+      { heading: "Pilih Frekuensi", body: "Data yang berubah setiap hari membutuhkan jadwal berbeda dari aset yang jarang berubah." },
+      { heading: "Simpan di Lokasi Terpisah", body: "Backup pada server yang sama tidak cukup ketika server mengalami kerusakan atau aksesnya hilang." },
+      { heading: "Uji Pemulihan", body: "Lakukan simulasi agar tahu apakah file lengkap, format dapat dibaca, dan waktu pemulihan sesuai kebutuhan." },
+      { heading: "Lindungi Akses Backup", body: "Backup juga merupakan data sensitif. Batasi akses, gunakan credential aman, dan catat aktivitas." }
+    ],
+    checklist: ["Daftar data kritis.", "Tetapkan jadwal backup.", "Simpan salinan terpisah.", "Uji restore berkala.", "Batasi akses penyimpanan."], conclusion: "Backup yang dapat dipulihkan menjaga bisnis tetap siap menghadapi gangguan yang tidak terduga."
+  },
+  {
+    id: "64", slug: "konten-evergreen-untuk-traffic-jangka-panjang", title: "Membangun Konten Evergreen untuk Traffic Jangka Panjang",
+    excerpt: "Buat artikel yang tetap relevan dengan pembaruan berkala dan fondasi informasi yang kuat.", image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1200&q=80", imageAlt: "Notebook dengan rencana konten jangka panjang", date: "14 Jan 2026", category: "Content", readTime: "8 min read",
+    introduction: "Konten evergreen menjawab kebutuhan yang tidak cepat hilang, seperti panduan dasar, checklist, atau penjelasan proses. Artikel jenis ini dapat mendatangkan traffic berulang ketika dirawat dengan baik.",
+    context: "Evergreen bukan berarti tidak pernah berubah. Contoh, tools, harga, kebijakan, dan praktik dapat bergeser sehingga artikel perlu ditinjau agar tetap akurat.",
+    sections: [
+      { heading: "Pilih Masalah yang Stabil", body: "Cari pertanyaan fundamental yang terus muncul pada pelanggan meski detail teknisnya berubah." },
+      { heading: "Buat Struktur yang Mudah Diperbarui", body: "Gunakan heading, daftar, dan contoh terpisah agar bagian tertentu dapat diperbarui tanpa menulis ulang semuanya." },
+      { heading: "Tambahkan Kedalaman", body: "Jelaskan alasan, langkah, kesalahan, dan cara mengukur hasil agar artikel tidak hanya menjadi ringkasan." },
+      { heading: "Jadwalkan Review", body: "Tetapkan tanggal peninjauan berdasarkan seberapa cepat topik berubah dan seberapa penting halaman bagi bisnis." },
+      { heading: "Hubungkan dengan Layanan", body: "Arahkan pembaca ke solusi atau konsultasi yang relevan tanpa membuat artikel berubah menjadi iklan semata." }
+    ],
+    checklist: ["Pilih pertanyaan yang stabil.", "Susun outline yang modular.", "Tambahkan langkah dan contoh.", "Tetapkan jadwal pembaruan.", "Ukur traffic dan tindakan lanjutan."], conclusion: "Konten evergreen menjadi aset ketika terus dirawat dan tetap menjawab kebutuhan pembaca."
+  }
+].map((article) => ({
+  ...article,
+  author: "Tim ATY0 WebCraft",
   content: createLongFormContent(article)
 }));
 
@@ -558,7 +985,7 @@ export const blogPosts: BlogPost[] = [
       <p>Memiliki website bukan lagi sekadar opsi, melainkan kebutuhan mendasar jika Anda ingin bisnis bertahan dan berkembang. Jangan tunda lagi, mulailah bangun rumah digital Anda hari ini!</p>
     `,
     date: "20 Jan 2025",
-    author: "Tim WebCraft",
+    author: "Tim ATY0 WebCraft",
     category: "Bisnis Digital",
     readTime: "4 min read"
   },
@@ -584,7 +1011,7 @@ export const blogPosts: BlogPost[] = [
       <p>Menerapkan SEO memang butuh waktu dan kesabaran, tapi hasilnya akan mendatangkan trafik gratis (organik) dalam jangka panjang.</p>
     `,
     date: "15 Feb 2025",
-    author: "Tim WebCraft",
+    author: "Tim ATY0 WebCraft",
     category: "Marketing",
     readTime: "5 min read"
   },
@@ -618,7 +1045,7 @@ export const blogPosts: BlogPost[] = [
       <p>Sebagai aturan praktis: Bangun website terlebih dahulu untuk memvalidasi ide dan mencari pasar. Jika transaksi sudah stabil dan Anda butuh fitur tingkat lanjut, barulah ekspansi ke Aplikasi Mobile.</p>
     `,
     date: "05 Mar 2025",
-    author: "Tim WebCraft",
+    author: "Tim ATY0 WebCraft",
     category: "Teknologi",
     readTime: "6 min read"
   },
@@ -648,11 +1075,12 @@ export const blogPosts: BlogPost[] = [
       <p>Website cepat tidak selalu membutuhkan perubahan besar. Mulailah dari gambar, skrip, hosting, dan pengujian mobile, lalu pantau hasilnya secara berkala menggunakan alat seperti PageSpeed Insights.</p>
     `,
     date: "18 Mar 2025",
-    author: "Tim WebCraft",
+    author: "Tim ATY0 WebCraft",
     category: "Teknologi",
     readTime: "5 min read"
   },
-  ...additionalBlogPosts
+  ...additionalBlogPosts,
+  ...moreBlogPosts
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {

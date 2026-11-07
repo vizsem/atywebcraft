@@ -39,3 +39,7 @@ next-env.d.ts
 *.backup
 convert.py
 styles_backup.css
+generate-icons.js
+
+# Orkestra AI — estado local (nunca versionar)
+.sta/

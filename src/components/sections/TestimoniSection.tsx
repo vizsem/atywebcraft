@@ -5,7 +5,7 @@ export function TestimoniSection() {
 <section id="testimoni" style={{ background: 'var(--surface)' }}>
   <div className="section-tag centered">Testimoni Klien</div>
   <div className="section-title centered">Apa Kata Mereka?</div>
-  <p className="section-desc centered">Kisah sukses klien kami setelah mempercayakan pengembangan produk digitalnya kepada tim WebCraft.</p>
+  <p className="section-desc centered">Kisah sukses klien kami setelah mempercayakan pengembangan produk digitalnya kepada tim ATY0 WebCraft.</p>
 
   <div className="testi-grid">
     <div className="testi-card">
@@ -32,7 +32,7 @@ export function TestimoniSection() {
     </div>
     <div className="testi-card">
       <div className="testi-stars">★★★★★</div>
-      <p className="testi-text">"Luar biasa! Setelah menggunakan jasa pembuatan company profile dari WebCraft, kredibilitas perusahaan kami meningkat drastis di mata klien."</p>
+      <p className="testi-text">"Luar biasa! Setelah menggunakan jasa pembuatan company profile dari ATY0 WebCraft, kredibilitas perusahaan kami meningkat drastis di mata klien."</p>
       <div className="testi-author">
         <div className="testi-avatar" style={{ background: 'linear-gradient(135deg,#f7971e,#ffd200)' }}>BP</div>
         <div>

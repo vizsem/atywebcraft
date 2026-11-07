@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description: "Kebijakan privasi ATY0 tentang pengumpulan, penggunaan, dan perlindungan data pengunjung website.",
+  title: "Privacy Policy — ATY0 WebCraft",
+  description: "Kebijakan privasi ATY0 WebCraft tentang pengumpulan, penggunaan, dan perlindungan data pengunjung website.",
   alternates: {
     canonical: "https://www.aty0.com/privacy-policy",
   },
@@ -18,7 +18,7 @@ export default function PrivacyPolicyPage() {
       </header>
 
       <div className="space-y-8 text-lg leading-relaxed [&>h2]:text-2xl [&>h2]:font-bold [&>h2]:text-text [&>h2]:mt-10 [&>h2]:mb-3 [&>p]:mb-4 [&>ul]:list-disc [&>ul]:pl-6 [&>ul]:space-y-2">
-        <p>ATY0 ("kami") menghargai privasi setiap pengunjung dan pelanggan. Kebijakan ini menjelaskan jenis informasi yang dapat kami terima melalui https://www.aty0.com, cara kami menggunakannya, serta pilihan yang tersedia bagi Anda.</p>
+        <p>ATY0 WebCraft ("kami") menghargai privasi setiap pengunjung dan pelanggan. Kebijakan ini menjelaskan jenis informasi yang dapat kami terima melalui https://www.aty0.com, cara kami menggunakannya, serta pilihan yang tersedia bagi Anda.</p>
 
         <h2>1. Informasi yang Kami Kumpulkan</h2>
         <p>Kami dapat menerima informasi yang Anda berikan secara langsung, seperti nama, nomor WhatsApp, alamat email, jenis layanan yang diminati, dan isi pesan ketika Anda mengisi formulir konsultasi atau menghubungi kami. Kami juga dapat menerima data teknis umum seperti alamat IP, jenis perangkat, browser, halaman yang dikunjungi, dan waktu akses.</p>
@@ -45,7 +45,7 @@ export default function PrivacyPolicyPage() {
         <p>Kami dapat memperbarui kebijakan ini ketika praktik, layanan, atau kewajiban hukum berubah. Versi terbaru akan dipublikasikan di halaman ini dengan tanggal pembaruan yang sesuai.</p>
 
         <h2>9. Hubungi Kami</h2>
-        <p>Jika Anda memiliki pertanyaan mengenai kebijakan privasi ini, silakan hubungi ATY0 melalui email halo@webcraft.id atau WhatsApp +62 857-9056-5666.</p>
+        <p>Jika Anda memiliki pertanyaan mengenai kebijakan privasi ini, silakan hubungi ATY0 WebCraft melalui email halo@webcraft.id atau WhatsApp +62 857-9056-5666.</p>
       </div>
     </article>
   );

@@ -2,8 +2,8 @@ import { CtaSection } from "@/components/sections/CtaSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Kontak ATY0",
-  description: "Hubungi ATY0 untuk konsultasi pembuatan website, aplikasi mobile, dan solusi digital untuk bisnis Anda.",
+  title: "Kontak ATY0 WebCraft",
+  description: "Hubungi ATY0 WebCraft untuk konsultasi pembuatan website, aplikasi mobile, dan solusi digital untuk bisnis Anda.",
   alternates: {
     canonical: "https://www.aty0.com/kontak",
   },

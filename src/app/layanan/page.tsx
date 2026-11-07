@@ -2,8 +2,8 @@ import { ServicesSection } from "@/components/sections/ServicesSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Layanan Pembuatan Website & Aplikasi Mobile",
-  description: "Layanan lengkap WebCraft: Pengembangan Website, Toko Online (E-Commerce), Aplikasi Android & iOS, UI/UX Design, dan SEO.",
+  title: "Layanan Pembuatan Website & Aplikasi Mobile — ATY0 WebCraft",
+  description: "Layanan lengkap ATY0 WebCraft: Pengembangan Website, Toko Online (E-Commerce), Aplikasi Android & iOS, UI/UX Design, dan SEO.",
   alternates: {
     canonical: "https://www.aty0.com/layanan",
   }

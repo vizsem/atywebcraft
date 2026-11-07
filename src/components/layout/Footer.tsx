@@ -2,15 +2,17 @@ import Link from "next/link";
 import Image from "next/image";
 
 export function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer>
       <div className="footer-top">
         <div className="footer-brand">
           <div className="logo flex items-center gap-3">
-            <Image src="/logo.png" alt="ATY0" width={48} height={48} className="rounded-lg" />
+            <Image src="/logo.png" alt="ATY0 WebCraft" width={48} height={48} className="rounded-lg" />
             <div>
-              <div className="font-semibold text-xl">ATY0<span style={{ color: "var(--accent3)" }}>.</span></div>
-              <p className="mt-2">Studio pembuatan website & aplikasi mobile profesional. Kami membantu bisnis hadir dan berkembang di dunia digital.</p>
+              <div className="font-semibold text-xl">ATY0 WebCraft<span style={{ color: "var(--accent3)" }}>.</span></div>
+              <p className="mt-2">Studio pembuatan website & aplikasi mobile profesional di Kediri, Jawa Timur. Kami membantu bisnis hadir, berkembang, dan mendominasi pasar digital.</p>
             </div>
           </div>
         </div>
@@ -33,6 +35,7 @@ export function Footer() {
             <li><Link href="/#portfolio">Portfolio</Link></li>
             <li><Link href="/#harga">Paket Harga</Link></li>
             <li><Link href="/#testimoni">Testimoni</Link></li>
+            <li><Link href="/blog">Blog & Edukasi</Link></li>
           </ul>
         </div>
         <div className="footer-links">
@@ -55,7 +58,7 @@ export function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>© 2025 WebCraft Studio. All rights reserved.</p>
+        <p>© {currentYear} ATY0 WebCraft Studio. All rights reserved.</p>
         <div className="footer-socials">
           <a className="social-link" href="https://wa.me/6285790565666" title="WhatsApp">WA</a>
           <a className="social-link" href="mailto:halo@webcraft.id" title="Email">✉</a>
