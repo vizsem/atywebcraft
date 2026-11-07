@@ -1,22 +1,37 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 import Link from "next/link";
-import { Search } from "lucide-react";
+import { Search, ChevronLeft, ChevronRight } from "lucide-react";
 import type { BlogPost } from "@/lib/blog-data";
 
 interface BlogListProps {
   posts: BlogPost[];
 }
 
+const POSTS_PER_PAGE = 9; // Standar industri: 9 artikel (3 baris x 3 kolom di desktop, simetris dan rapi)
+
 export function BlogList({ posts }: BlogListProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>("Semua");
   const [searchQuery, setSearchQuery] = useState<string>("");
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const categories = useMemo(() => {
     const unique = Array.from(new Set(posts.map((p) => p.category).filter(Boolean)));
     return ["Semua", ...unique];
   }, [posts]);
+
+  // Reset ke halaman 1 setiap kali kategori atau pencarian berubah
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category);
+    setCurrentPage(1);
+  };
+
+  const handleSearchChange = (query: string) => {
+    setSearchQuery(query);
+    setCurrentPage(1);
+  };
 
   const filteredPosts = useMemo(() => {
     return posts.filter((post) => {
@@ -29,17 +44,50 @@ export function BlogList({ posts }: BlogListProps) {
     });
   }, [posts, selectedCategory, searchQuery]);
 
+  const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
+
+  const paginatedPosts = useMemo(() => {
+    const start = (currentPage - 1) * POSTS_PER_PAGE;
+    return filteredPosts.slice(start, start + POSTS_PER_PAGE);
+  }, [filteredPosts, currentPage]);
+
+  const handlePageChange = (newPage: number) => {
+    if (newPage < 1 || newPage > totalPages) return;
+    setCurrentPage(newPage);
+    if (containerRef.current) {
+      const offsetTop = containerRef.current.getBoundingClientRect().top + window.scrollY - 90;
+      window.scrollTo({ top: offsetTop, behavior: "smooth" });
+    }
+  };
+
+  // Generate page numbers with ellipsis for cleaner look
+  const pageNumbers = useMemo(() => {
+    const pages: (number | string)[] = [];
+    if (totalPages <= 5) {
+      for (let i = 1; i <= totalPages; i++) pages.push(i);
+    } else {
+      if (currentPage <= 3) {
+        pages.push(1, 2, 3, 4, "...", totalPages);
+      } else if (currentPage >= totalPages - 2) {
+        pages.push(1, "...", totalPages - 3, totalPages - 2, totalPages - 1, totalPages);
+      } else {
+        pages.push(1, "...", currentPage - 1, currentPage, currentPage + 1, "...", totalPages);
+      }
+    }
+    return pages;
+  }, [currentPage, totalPages]);
+
   return (
-    <div className="space-y-8">
+    <div ref={containerRef} className="space-y-8 scroll-mt-24">
       {/* Search & Filter Bar */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-4">
         {/* Category Pills */}
         <div className="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 scrollbar-none">
-          {categories.slice(0, 7).map((category) => (
+          {categories.slice(0, 8).map((category) => (
             <button
               key={category}
               type="button"
-              onClick={() => setSelectedCategory(category)}
+              onClick={() => handleCategoryChange(category)}
               className={`px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
                 selectedCategory === category
                   ? "bg-primary text-white shadow-md shadow-primary/25"
@@ -58,15 +106,21 @@ export function BlogList({ posts }: BlogListProps) {
             type="text"
             placeholder="Cari topik atau artikel..."
             value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
+            onChange={(e) => handleSearchChange(e.target.value)}
             className="w-full pl-10 pr-4 py-2 bg-surface border border-border rounded-full text-sm text-text placeholder:text-muted focus:outline-none focus:border-primary transition-colors"
           />
         </div>
       </div>
 
-      {/* Result Count */}
-      <div className="text-xs text-muted">
-        Menampilkan {filteredPosts.length} dari {posts.length} artikel
+      {/* Result Count and Current Page info */}
+      <div className="flex items-center justify-between text-xs text-muted">
+        <span>
+          Menampilkan {paginatedPosts.length > 0 ? (currentPage - 1) * POSTS_PER_PAGE + 1 : 0}–
+          {Math.min(currentPage * POSTS_PER_PAGE, filteredPosts.length)} dari {filteredPosts.length} artikel
+        </span>
+        {totalPages > 1 && (
+          <span>Halaman {currentPage} dari {totalPages}</span>
+        )}
       </div>
 
       {/* Grid Articles */}
@@ -76,8 +130,8 @@ export function BlogList({ posts }: BlogListProps) {
           <button
             type="button"
             onClick={() => {
-              setSelectedCategory("Semua");
-              setSearchQuery("");
+              handleCategoryChange("Semua");
+              handleSearchChange("");
             }}
             className="mt-4 px-4 py-2 text-sm text-primary hover:underline font-medium"
           >
@@ -86,7 +140,7 @@ export function BlogList({ posts }: BlogListProps) {
         </div>
       ) : (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredPosts.map((post) => (
+          {paginatedPosts.map((post) => (
             <article
               key={post.id}
               className="group bg-surface border border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-300 flex flex-col justify-between"
@@ -110,7 +164,7 @@ export function BlogList({ posts }: BlogListProps) {
                     <span className="text-xs text-muted">{post.readTime}</span>
                   </div>
                   <Link href={`/blog/${post.slug}`} className="group">
-                    <h2 className="text-xl font-bold font-display mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                    <h2 className="text-xl font-bold font-display mb-3 group-hover:text-primary transition-colors line-clamp-2 text-text">
                       {post.title}
                     </h2>
                   </Link>
@@ -127,6 +181,65 @@ export function BlogList({ posts }: BlogListProps) {
             </article>
           ))}
         </div>
+      )}
+
+      {/* Pagination Controls */}
+      {totalPages > 1 && (
+        <nav aria-label="Navigasi Halaman Blog" className="pt-8 pb-4 flex justify-center items-center gap-1.5 sm:gap-2">
+          {/* Previous Button */}
+          <button
+            type="button"
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+            aria-label="Halaman sebelumnya"
+            className="inline-flex items-center gap-1 px-3.5 py-2 rounded-xl text-xs font-semibold bg-surface border border-border text-muted hover:text-text hover:border-primary/50 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+          >
+            <ChevronLeft className="w-4 h-4" />
+            <span className="hidden sm:inline">Sebelumnya</span>
+          </button>
+
+          {/* Page Number Buttons */}
+          <div className="flex items-center gap-1 sm:gap-1.5">
+            {pageNumbers.map((page, idx) => {
+              if (page === "...") {
+                return (
+                  <span key={`dots-${idx}`} className="px-2 py-1 text-xs text-muted">
+                    ...
+                  </span>
+                );
+              }
+              const pageNum = page as number;
+              const isActive = pageNum === currentPage;
+              return (
+                <button
+                  key={pageNum}
+                  type="button"
+                  onClick={() => handlePageChange(pageNum)}
+                  aria-current={isActive ? "page" : undefined}
+                  className={`w-9 h-9 rounded-xl text-xs font-semibold flex items-center justify-center transition-all ${
+                    isActive
+                      ? "bg-primary text-white shadow-md shadow-primary/30"
+                      : "bg-surface border border-border text-muted hover:text-text hover:border-primary/40"
+                  }`}
+                >
+                  {pageNum}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Next Button */}
+          <button
+            type="button"
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+            aria-label="Halaman selanjutnya"
+            className="inline-flex items-center gap-1 px-3.5 py-2 rounded-xl text-xs font-semibold bg-surface border border-border text-muted hover:text-text hover:border-primary/50 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+          >
+            <span className="hidden sm:inline">Selanjutnya</span>
+            <ChevronRight className="w-4 h-4" />
+          </button>
+        </nav>
       )}
     </div>
   );
