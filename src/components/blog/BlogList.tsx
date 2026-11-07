@@ -82,8 +82,8 @@ export function BlogList({ posts }: BlogListProps) {
       {/* Search & Filter Bar */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-4">
         {/* Category Pills */}
-        <div className="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 scrollbar-none">
-          {categories.slice(0, 8).map((category) => (
+        <div className="flex items-center gap-2 flex-wrap w-full md:w-auto">
+          {categories.map((category) => (
             <button
               key={category}
               type="button"

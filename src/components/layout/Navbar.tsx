@@ -4,10 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { Moon, Sun, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export function Navbar() {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const savedTheme = window.localStorage.getItem("theme") as "light" | "dark" | null;
@@ -43,11 +45,25 @@ export function Navbar() {
           </Link>
         </div>
         <ul className="nav-links">
-          {navLinks.map((item) => (
-            <li key={item.href}>
-              <Link href={item.href}>{item.label}</Link>
-            </li>
-          ))}
+          {navLinks.map((item) => {
+            const isActive =
+              item.href === "/blog"
+                ? pathname.startsWith("/blog")
+                : item.href.startsWith("/#")
+                ? false // anchor links: never mark active
+                : pathname === item.href;
+            return (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  style={isActive ? { color: "var(--accent)" } : undefined}
+                  className={isActive ? "font-semibold" : ""}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
         <div className="flex items-center gap-2">
           <button
@@ -83,7 +99,12 @@ export function Navbar() {
                 <Link
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block font-medium text-[var(--text)] hover:text-[var(--accent)] transition-colors"
+                  className={`block font-medium transition-colors ${
+                    (item.href === "/blog" && pathname.startsWith("/blog")) ||
+                    pathname === item.href
+                      ? "text-[var(--accent)] font-semibold"
+                      : "text-[var(--text)] hover:text-[var(--accent)]"
+                  }`}
                 >
                   {item.label}
                 </Link>

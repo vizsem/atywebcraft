@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, Calendar, Clock, ListOrdered, Sparkles, User, ArrowRight, MessageCircle } from "lucide-react";
 import { BlogArticleShare } from "@/components/blog/BlogArticleShare";
+import { ReadingProgress } from "@/components/blog/ReadingProgress";
 import type { Metadata } from "next";
 
 // Generate dynamic metadata for SEO based on blog post
