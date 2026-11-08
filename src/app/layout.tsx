@@ -109,7 +109,7 @@ const jsonLd = {
   image: "https://www.aty0.com/logo.png",
   url: "https://www.aty0.com",
   telephone: "+6285790565666",
-  email: "halo@webcraft.id",
+  email: "halo@aty0.com",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Kediri",

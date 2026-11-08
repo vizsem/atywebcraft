@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   return (
-    <div className="pt-24 pb-16 min-h-[70vh]">
+    <div className="pt-24 pb-28 min-h-[70vh]">
       <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }} className="text-center mb-12">
         <h1 className="text-5xl font-bold font-display mb-6">Wawasan <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">Digital</span></h1>
         <p className="text-lg text-muted max-w-2xl mx-auto">

@@ -36,7 +36,7 @@ export default function PrivacyPolicyPage() {
         <p>Kami berupaya menggunakan langkah teknis dan organisasi yang wajar untuk melindungi informasi dari akses, perubahan, atau pengungkapan yang tidak sah. Tidak ada transmisi internet yang sepenuhnya bebas risiko, sehingga kami tidak dapat menjamin keamanan absolut.</p>
 
         <h2>6. Hak dan Pilihan Anda</h2>
-        <p>Anda dapat meminta informasi mengenai data yang kami simpan, meminta perbaikan, meminta penghapusan jika memungkinkan, atau berhenti menerima komunikasi pemasaran. Untuk permintaan tersebut, hubungi kami melalui halo@webcraft.id. Kami dapat meminta verifikasi yang wajar sebelum memproses permintaan.</p>
+        <p>Anda dapat meminta informasi mengenai data yang kami simpan, meminta perbaikan, meminta penghapusan jika memungkinkan, atau berhenti menerima komunikasi pemasaran. Untuk permintaan tersebut, hubungi kami melalui halo@aty0.com. Kami dapat meminta verifikasi yang wajar sebelum memproses permintaan.</p>
 
         <h2>7. Privasi Anak</h2>
         <p>Website ini ditujukan untuk kebutuhan bisnis umum dan tidak secara sengaja mengumpulkan data pribadi anak tanpa persetujuan pihak yang berwenang. Jika Anda mengetahui adanya data yang terkumpul secara tidak sengaja, silakan hubungi kami.</p>
@@ -45,7 +45,7 @@ export default function PrivacyPolicyPage() {
         <p>Kami dapat memperbarui kebijakan ini ketika praktik, layanan, atau kewajiban hukum berubah. Versi terbaru akan dipublikasikan di halaman ini dengan tanggal pembaruan yang sesuai.</p>
 
         <h2>9. Hubungi Kami</h2>
-        <p>Jika Anda memiliki pertanyaan mengenai kebijakan privasi ini, silakan hubungi ATY0 WebCraft melalui email halo@webcraft.id atau WhatsApp +62 857-9056-5666.</p>
+        <p>Jika Anda memiliki pertanyaan mengenai kebijakan privasi ini, silakan hubungi ATY0 WebCraft melalui email halo@aty0.com atau WhatsApp +62 857-9056-5666.</p>
       </div>
     </article>
   );

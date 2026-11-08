@@ -45,7 +45,7 @@ export default function TermsPage() {
         <p>Syarat ini ditafsirkan berdasarkan hukum yang berlaku di Republik Indonesia. Setiap perselisihan akan diupayakan penyelesaiannya terlebih dahulu melalui komunikasi dan musyawarah.</p>
 
         <h2>9. Hubungi Kami</h2>
-        <p>Pertanyaan mengenai syarat layanan dapat dikirim ke halo@webcraft.id atau WhatsApp +62 857-9056-5666.</p>
+        <p>Pertanyaan mengenai syarat layanan dapat dikirim ke halo@aty0.com atau WhatsApp +62 857-9056-5666.</p>
       </div>
     </article>
   );

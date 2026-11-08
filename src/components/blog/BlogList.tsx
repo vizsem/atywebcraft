@@ -185,7 +185,10 @@ export function BlogList({ posts }: BlogListProps) {
 
       {/* Pagination Controls */}
       {totalPages > 1 && (
-        <nav aria-label="Navigasi Halaman Blog" className="pt-8 pb-4 flex justify-center items-center gap-1.5 sm:gap-2">
+        <nav
+          aria-label="Navigasi Halaman Blog"
+          className="mt-16 pt-10 pb-6 border-t border-border/50 flex justify-center items-center gap-1.5 sm:gap-2"
+        >
           {/* Previous Button */}
           <button
             type="button"

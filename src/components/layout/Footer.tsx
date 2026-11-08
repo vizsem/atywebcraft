@@ -42,7 +42,7 @@ export function Footer() {
           <h4>Kontak</h4>
           <ul>
             <li><Link href="https://wa.me/6285790565666">📱 +62 857-9056-5666</Link></li>
-            <li><a href="mailto:halo@webcraft.id">✉️ halo@webcraft.id</a></li>
+            <li><a href="mailto:halo@aty0.com">✉️ halo@aty0.com</a></li>
             <li><a href="https://maps.google.com/?q=Kediri%2C%20Jawa%20Timur">📍 Kediri, Jawa Timur</a></li>
             <li>🕐 Senin–Sabtu, 08–17 WIB</li>
           </ul>
@@ -61,7 +61,7 @@ export function Footer() {
         <p>© {currentYear} ATY0 WebCraft Studio. All rights reserved.</p>
         <div className="footer-socials">
           <a className="social-link" href="https://wa.me/6285790565666" title="WhatsApp">WA</a>
-          <a className="social-link" href="mailto:halo@webcraft.id" title="Email">✉</a>
+          <a className="social-link" href="mailto:halo@aty0.com" title="Email">✉</a>
         </div>
       </div>
     </footer>

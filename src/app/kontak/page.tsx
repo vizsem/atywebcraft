@@ -19,7 +19,7 @@ export default function KontakPage() {
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm">
           <a className="nav-cta" href="https://wa.me/6285790565666">WhatsApp: +62 857-9056-5666</a>
-          <a className="btn-ghost" href="mailto:halo@webcraft.id">halo@webcraft.id</a>
+          <a className="btn-ghost" href="mailto:halo@aty0.com">halo@aty0.com</a>
         </div>
       </div>
       <CtaSection />
