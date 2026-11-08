@@ -1,4 +1,5 @@
 import { PricingSection } from "@/components/sections/PricingSection";
+import { FaqSection } from "@/components/sections/FaqSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -19,6 +20,7 @@ export default function HargaPage() {
         </p>
       </div>
       <PricingSection />
+      <FaqSection />
     </div>
   );
 }

@@ -8,6 +8,7 @@ import { PortfolioSection } from "@/components/sections/PortfolioSection";
 import { PricingSection } from "@/components/sections/PricingSection";
 import { TestimoniSection } from "@/components/sections/TestimoniSection";
 import { BlogRecommendationsSection } from "@/components/sections/BlogRecommendationsSection";
+import { FaqSection } from "@/components/sections/FaqSection";
 import { CtaSection } from "@/components/sections/CtaSection";
 
 export const metadata: Metadata = {
@@ -31,6 +32,7 @@ export default function HomePage() {
       <PricingSection />
       <TestimoniSection />
       <BlogRecommendationsSection />
+      <FaqSection />
       <CtaSection />
     </>
   );

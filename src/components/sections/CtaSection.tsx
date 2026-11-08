@@ -5,19 +5,43 @@ import { FormEvent, useState } from "react";
 export function CtaSection() {
   const [btnText, setBtnText] = useState("Kirim & Konsultasi Gratis 🚀");
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setBtnText("✅ Pesan Terkirim! Kami akan hubungi segera.");
-    setIsSubmitted(true);
+    setIsLoading(true);
 
     const formData = new FormData(e.currentTarget);
+    const payload = {
+      name: formData.get("name"),
+      phone: formData.get("phone"),
+      email: formData.get("email"),
+      service: formData.get("service"),
+      message: formData.get("message"),
+    };
+
+    // Kirim ke backend API secara paralel tanpa menghambat user
+    try {
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+    } catch (err) {
+      console.warn("Gagal menyimpan ke API, melanjutkan ke WhatsApp:", err);
+    }
+
+    setIsLoading(false);
+    setBtnText("✅ Pesan Terkirim! Membuka WhatsApp...");
+    setIsSubmitted(true);
+
     const message = [
-      `Nama: ${formData.get("name")}`,
-      `WhatsApp: ${formData.get("phone")}`,
-      `Email: ${formData.get("email")}`,
-      `Layanan: ${formData.get("service")}`,
-      `Kebutuhan: ${formData.get("message")}`,
+      `Halo ATY0 WebCraft, saya ingin konsultasi proyek:`,
+      `• Nama: ${payload.name}`,
+      `• WhatsApp: ${payload.phone}`,
+      `• Email: ${payload.email}`,
+      `• Layanan: ${payload.service}`,
+      `• Kebutuhan: ${payload.message}`,
     ].join("\n");
 
     window.open(`https://wa.me/6285790565666?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
@@ -59,10 +83,11 @@ export function CtaSection() {
       <textarea name="message" placeholder="Ceritakan bisnis dan kebutuhan website Anda..." required></textarea>
       <button 
         type="submit"
-        className="btn-submit" 
+        disabled={isLoading || isSubmitted}
+        className="btn-submit disabled:opacity-80" 
         style={isSubmitted ? { background: "linear-gradient(135deg, #11998e, #38ef7d)", color: "#fff" } : {}}
       >
-        {btnText}
+        {isLoading ? "Mengirim pesan..." : btnText}
       </button>
     </form>
   </div>

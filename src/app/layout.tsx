@@ -4,7 +4,9 @@ import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWA } from "@/components/ui/FloatingWA";
+import { BackToTop } from "@/components/ui/BackToTop";
 import { ScrollObserver } from "@/components/ui/ScrollObserver";
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -146,10 +148,12 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-bg text-text font-body antialiased overflow-x-hidden">
+        <GoogleAnalytics />
         <ScrollObserver />
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <BackToTop />
         <FloatingWA />
       </body>
     </html>

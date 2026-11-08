@@ -35,6 +35,7 @@ export function Footer() {
             <li><Link href="/#portfolio">Portfolio</Link></li>
             <li><Link href="/#harga">Paket Harga</Link></li>
             <li><Link href="/#testimoni">Testimoni</Link></li>
+            <li><Link href="/#faq">FAQ & Bantuan</Link></li>
             <li><Link href="/blog">Blog & Edukasi</Link></li>
           </ul>
         </div>
