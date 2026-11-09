@@ -1,3 +1,5 @@
+import { extraBlogPosts } from "./blog-data-extra";
+
 export interface BlogPost {
   id: string;
   slug: string;
@@ -20,7 +22,7 @@ type LongFormArticle = Pick<BlogPost, "id" | "slug" | "title" | "excerpt" | "ima
   conclusion: string;
 };
 
-function createLongFormContent(article: Pick<LongFormArticle, "introduction" | "context" | "sections" | "checklist" | "conclusion">): string {
+export function createLongFormContent(article: Pick<LongFormArticle, "introduction" | "context" | "sections" | "checklist" | "conclusion">): string {
   const sections = article.sections.map(({ heading, body }) => `<h2>${heading}</h2><p>${body}</p>`).join("\n");
   const checklist = article.checklist.map((item) => `<li>${item}</li>`).join("\n");
 
@@ -1080,7 +1082,8 @@ export const blogPosts: BlogPost[] = [
     readTime: "5 min read"
   },
   ...additionalBlogPosts,
-  ...moreBlogPosts
+  ...moreBlogPosts,
+  ...extraBlogPosts
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
