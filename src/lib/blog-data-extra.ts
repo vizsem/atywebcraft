@@ -699,3 +699,4 @@ export const extraBlogPosts: BlogPost[] = rawExtraArticles.map((article) => ({
     conclusion: article.conclusion,
   }),
 }));
+
